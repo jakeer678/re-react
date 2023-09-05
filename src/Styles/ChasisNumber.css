@@ -953,6 +953,6 @@ p.success-footer-title > span {
   margin-top: 24px;
 }
 
-button {
-  background: transparent;
+.closebtn {
+  background-color: none;
 }/*# sourceMappingURL=ChasisNumber.css.map */

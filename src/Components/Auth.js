@@ -69,7 +69,7 @@ const Auth = () => {
                     By continuing, you agree to our
                     <span className="redirect-links">
                       Terms and Conditions
-                    </span>{" "}
+                    </span>
                     and
                     <span className="redirect-links">Privacy Policy</span>
                   </small>
