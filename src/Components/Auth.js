@@ -37,7 +37,7 @@ const Auth = () => {
                   className="btn btn-secondary closebtn"
                   data-bs-dismiss="modal"
                 >
-                  <span aria-hidden="false" >&times;</span>
+                  <span aria-hidden="false">&times;</span>
                 </button>
               </div>
               <div className="modal-body">
@@ -75,22 +75,6 @@ const Auth = () => {
                   </small>
                 </form>
               </div>
-              {/* <div className="break">
-                <span>Or</span>
-              </div>
-              <div className="external-login">
-                <p className="continue-with">Continue with</p>
-                <div id="ext-login-btns">
-                  <button className="login-btns">
-                    <img src={google} alt="google-logo" />
-                    GOOGLE
-                  </button>
-                  <button className="login-btns">
-                    <img src={facebook} alt="fb-logo" />
-                    FACEBOOK
-                  </button>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
