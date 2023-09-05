@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "tt_commonsregular";
+  src: url("../assets/fonts/tt_commons_regular-webfont.woff2") format("woff2"), url("../assets/fonts/tt_commons_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "tt_commonsblack";
+  src: url("../assets/fonts/tt_commons_black-webfont.woff2") format("woff2"), url("../assets/fonts/tt_commons_black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}/*# sourceMappingURL=fonts.css.map */

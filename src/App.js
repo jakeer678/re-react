@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Auth from "./Components/Auth";
+import Banner from "./Components/Banner";
+import ChasisNumber from "./Components/ChasisNumber";
+import MotorDetails from "./Components/MotorDetails";
+import OtpVerify from "./Components/OtpVerify";
+import RegisterMotor from "./Components/RegisterMotor";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Banner />
+      <Auth />
+      <OtpVerify />
+      <RegisterMotor />
+      <MotorDetails />
+      <ChasisNumber />
+    </>
   );
 }
 
