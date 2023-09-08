@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import chevron from "../assets/Images/chevron_left.svg";
 import chasis from "../assets/Images/view-chessis.svg";
+import chasisnum from "../assets/Images/chasisnum.png";
 import close from "../assets/Images/close.svg";
+import Frame from "../assets/Images/Frame.svg";
 import "../Styles/ChasisNumber.css";
 import { contextStore } from "../context/Contextstore";
 import Modal from "react-bootstrap/Modal";
@@ -19,7 +21,9 @@ const ChasisNumber = () => {
               <h5 className="modal-title modalheader">Chassis Number</h5>
             </div>
 
-            <span onClick={handleClose} className="closebtnchasis">&times;</span>
+            <span onClick={handleClose} className="closebtnchasis">
+              &times;
+            </span>
           </div>
 
           <div className="modal-body">
@@ -28,13 +32,26 @@ const ChasisNumber = () => {
               You can find the Chassis number written on the vehicle
               registration certificate.
             </p>
+            <div className="sub-body-title-bottom-border"></div>
             <p className="chesis-view-zoomed">MALPC8131LLM109314</p>
+
             <img
-              src={chasis}
+              src={chasisnum}
               alt="view-chessis-img"
               className="view-chessis-img"
             />
+            <div className="vertcalLine">
+              <div className="vertical-line"></div>
+              <div className="vertical-line-mark">
+                <img
+                  src={Frame}
+                  alt="view-chessis-img"
+                  className="view-chessis-img"
+                />
+              </div>
+            </div>
           </div>
+          <div className="view-chessis-img-chasis"></div>
         </Modal>
       </section>
     </>

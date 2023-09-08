@@ -7,18 +7,23 @@
   text-align: left;
 }
 
+@media screen and (min-width: 769px) {
+  .modal-title {
+    margin-bottom: 0;
+    line-height: var(--bs-modal-title-line-height);
+    font-family: Guardian Sans XCond;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.56px;
+  }
+}
 @media screen and (max-width) {
   .modalheader {
     font-size: 20px;
   }
-}
-.modal-title {
-  margin-bottom: 0;
-  line-height: var(--bs-modal-title-line-height);
-  font-family: Guardian Sans XCond;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 0.56px;
+  .modal-title {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=EnterOtp.css.map */

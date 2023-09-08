@@ -1,27 +1,39 @@
 .regd-motor-header {
-    display: flex;
+  display: flex;
 }
 
-
 .modalheader {
-    font-family: Guardian Sans XCond;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 34px;
-    letter-spacing: 0.02em;
-    text-align: left;
-  }
-  
+  font-family: Guardian Sans XCond;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
 
-  #red:checked  .regd-motorcycles {
-    background-color: red;
+#red:checked .regd-motorcycles {
+  background-color: red;
 }
 
 @media screen and (max-width: 768px) {
-.modal-content #registerModal {
+  .modal-content #registerModal {
     width: 100%;
-    color: var(--text-neutral-strong, #EDEDED) !important;
+    color: var(--text-neutral-strong, #ededed) !important;
     border-radius: inherit !important;
-    background: linear-gradient(172deg, rgba(0, 0, 0, 0.32) 6.45%, rgba(0, 0, 0, 0.88) 52.72%) !important;
-}
+    background: linear-gradient(
+      172deg,
+      rgba(0, 0, 0, 0.32) 6.45%,
+      rgba(0, 0, 0, 0.88) 52.72%
+    ) !important;
+  }
+  .modal-titles h5 {
+    color: var(--White, #ededed);
+
+    font-family: Guardian Sans XCond;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+    letter-spacing: 0.8px;
+  }
 }

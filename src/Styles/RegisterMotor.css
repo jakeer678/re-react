@@ -18,8 +18,17 @@
 @media screen and (max-width: 768px) {
   .modal-content #registerModal {
     width: 100%;
-    color: var(--text-neutral-strong, #EDEDED) !important;
+    color: var(--text-neutral-strong, #ededed) !important;
     border-radius: inherit !important;
     background: linear-gradient(172deg, rgba(0, 0, 0, 0.32) 6.45%, rgba(0, 0, 0, 0.88) 52.72%) !important;
+  }
+  .modal-titles h5 {
+    color: var(--White, #ededed);
+    font-family: Guardian Sans XCond;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.8px;
   }
 }/*# sourceMappingURL=RegisterMotor.css.map */

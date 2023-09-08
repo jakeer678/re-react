@@ -16,14 +16,12 @@ const MotorDetails = () => {
     <>
       <section>
         <Modal show={show} animation={false} onHide={handleClose}>
-          <div className="modal-header">
-            <h5 className="modal-title" id="modalTitle">
-              Enter Motorcycle Details
-            </h5>
-            <span onClick={handleClose} className="closebtnchasis">
-              &times;
-            </span>
-          </div>
+        <div className="modal-header">
+              <h5 className="modal-title modalheader">Enter Motorcycle Details</h5>
+              <span onClick={handleClose} className="closebtnchasis">
+                &times;
+              </span>
+            </div>
           <div className="modal-body">
             <form>
               <div className="vehicle-details-form">

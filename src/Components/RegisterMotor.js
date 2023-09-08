@@ -31,7 +31,7 @@ const RegisterMotor = () => {
           id="registerModal"
         >
           <div className="modal-header">
-            <h5 className="modal-title modalTitle">Registered Motorcycle</h5>
+            <h5 className="modal-titles modalTitle">Registered Motorcycle</h5>
 
             <span onClick={handleClose} className="closebtnchasis">
               &times;

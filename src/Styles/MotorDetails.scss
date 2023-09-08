@@ -7,3 +7,9 @@
     text-align: left;
   }
   
+  @media screen and (max-width:768px) {
+    .modal-title  {
+        font-size: 20px !important;
+       
+    }
+  }

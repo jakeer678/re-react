@@ -7,12 +7,12 @@ import { contextStore } from "../context/Contextstore";
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
-  const { handleShow, handleClose,openModal } = useContext(contextStore);
+  const { handleShow, handleClose, openModal } = useContext(contextStore);
   const redirect = useNavigate();
-    const openLoginmodal = () => {
-      redirect('/auth')
-      handleShow()
-    }
+  const openLoginmodal = () => {
+    redirect("/auth");
+    handleShow();
+  };
   return (
     <>
       <section>
@@ -49,7 +49,6 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <button></button>
       </section>
     </>
   );

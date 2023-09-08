@@ -18,10 +18,11 @@ const OtpVerify = () => {
       <section>
         <Modal show={show} animation={false} onHide={handleClose}>
           <div className="modal-header">
-            <div className="modal-title modalheader">
+            <div className="chasisheader">
               <img src={chevron} alt="back-btn" className="back-btn" />
+              <h5 className="modal-title modalheader">OTP Verification</h5>
             </div>
-            <div>OTP Verification</div>
+
             <span onClick={handleClose} className="closebtnchasis">
               &times;
             </span>
