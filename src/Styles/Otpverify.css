@@ -5,4 +5,9 @@
   line-height: 34px;
   letter-spacing: 0.02em;
   text-align: left;
-}/*# sourceMappingURL=MotorDetails.css.map */
+}
+
+.justify-content-center {
+  justify-content: center !important;
+  width: 100%;
+}/*# sourceMappingURL=Otpverify.css.map */

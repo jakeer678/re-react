@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"MotorDetails.css"}
+{"version":3,"sources":["MotorDetails.scss","MotorDetails.css"],"names":[],"mappings":"AAAA;EACI,gCAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,sBAAA;EACA,gBAAA;ACCJ","file":"MotorDetails.css"}

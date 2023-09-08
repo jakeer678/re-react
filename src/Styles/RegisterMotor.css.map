@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"RegisterMotor.css"}
+{"version":3,"sources":["RegisterMotor.scss","RegisterMotor.css"],"names":[],"mappings":"AAAA;EACI,aAAA;ACCJ;;ADGA;EACI,gCAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,sBAAA;EACA,gBAAA;ACAJ;;ADIE;EACE,qBAAA;ACDJ;;ADIA;EACA;IACI,WAAA;IACA,qDAAA;IACA,iCAAA;IACA,qGAAA;ECDF;AACF","file":"RegisterMotor.css"}

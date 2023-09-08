@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../Styles/Banner.css";
 import strip from "../assets/Images/Strip.svg";
 import iconBox from "../assets/Images/icon box.svg";
 import bannerVideo from "../assets/Images/banner-video.svg";
+import { contextStore } from "../context/Contextstore";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const { handleShow, handleClose,openModal } = useContext(contextStore);
+  const redirect = useNavigate();
+    const openLoginmodal = () => {
+      redirect('/auth')
+      handleShow()
+    }
   return (
     <>
       <section>
@@ -21,7 +29,7 @@ const Banner = () => {
                   <span className="desc-imp">Ride Sure</span>. Choose your
                   package based on your riding style and usage.
                 </p>
-                <button className="explore-btn">
+                <button onClick={openLoginmodal} className="explore-btn">
                   EXPLORE RIDE SURE
                   <img
                     className="arrow_right"
@@ -41,6 +49,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
+        <button></button>
       </section>
     </>
   );

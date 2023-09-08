@@ -1,1 +1,25 @@
-/*# sourceMappingURL=RegisterMotor.css.map */
+.regd-motor-header {
+  display: flex;
+}
+
+.modalheader {
+  font-family: Guardian Sans XCond;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+#red:checked .regd-motorcycles {
+  background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content #registerModal {
+    width: 100%;
+    color: var(--text-neutral-strong, #EDEDED) !important;
+    border-radius: inherit !important;
+    background: linear-gradient(172deg, rgba(0, 0, 0, 0.32) 6.45%, rgba(0, 0, 0, 0.88) 52.72%) !important;
+  }
+}/*# sourceMappingURL=RegisterMotor.css.map */

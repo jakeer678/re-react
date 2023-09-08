@@ -1,17 +1,19 @@
 import React, { useContext, useState } from "react";
 import google from "../assets/Images/Google.svg";
 import facebook from "../assets/Images/Facebook.svg";
-import { NavLink, useNavigate } from "react-router-dom";
 import "../Styles/ChasisNumber.css";
 import "../Styles/Auth.css";
-import Modal from "react-bootstrap/Modal";
+import "../Styles/VerifyNumber.css";
+import { useNavigate } from "react-router-dom";
 import { contextStore } from "../context/Contextstore";
-const Auth = () => {
+import Modal from "react-bootstrap/Modal";
+const VerifyNumber = () => {
   const [inputNumber, setInputNumber] = useState("+91");
-  const { show, handleShow, handleClose } = useContext(contextStore);
   const redirect = useNavigate();
-  const sendOtpAuth = () => {
-    redirect("/verifyNumber");
+  const { show, handleShow, handleClose } = useContext(contextStore);
+
+  const verifyNumber = () => {
+    redirect("/enterOtp");
   };
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -30,8 +32,8 @@ const Auth = () => {
             <div className="modal-header">
               <h5 className="modal-title modalheader">Login or Signup</h5>
               <span onClick={handleClose} className="closebtnchasis">
-                &times;
-              </span>
+              &times;
+            </span>
             </div>
             <div className="modal-body">
               <form>
@@ -56,7 +58,7 @@ const Auth = () => {
                   id="sendOtp"
                   type="submit"
                   className="btn btn-block disableOtp"
-                  onClick={sendOtpAuth}
+                  onClick={verifyNumber}
                 >
                   SEND OTP
                 </button>
@@ -75,4 +77,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default VerifyNumber;

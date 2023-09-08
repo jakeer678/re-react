@@ -1,0 +1,24 @@
+.modalheader {
+  font-family: Guardian Sans XCond;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+@media screen and (max-width) {
+  .modalheader {
+    font-size: 20px;
+  }
+}
+.modal-title {
+  margin-bottom: 0;
+  line-height: var(--bs-modal-title-line-height);
+  font-family: Guardian Sans XCond;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.56px;
+}/*# sourceMappingURL=EnterOtp.css.map */

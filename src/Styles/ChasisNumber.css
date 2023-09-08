@@ -1,13 +1,44 @@
 /*forms [START]*/
+.modalheader {
+  font-family: Guardian Sans XCond;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.chasisheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chasisclosebtn {
+  background: #282828;
+  border: none;
+  scale: 2.4;
+}
+
+.modal-title .modalheader {
+  margin-bottom: 0;
+  line-height: var(--bs-modal-title-line-height);
+  font-family: Guardian Sans XCond;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.56px;
+}
+
+.closebtnchasis {
+  scale: 2.4;
+  cursor: pointer;
+}
+
 .modal-header {
   border: none;
   padding: 0 0 1rem;
-}
-
-.modal-content {
-  padding: 24px;
-  background: #282828;
-  color: #fff;
 }
 
 .modal-body {
@@ -52,16 +83,6 @@ input#inputPhone {
   color: #fff;
 }
 
-#modalTitle {
-  font-family: Guardian Sans XCond;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 34px;
-  letter-spacing: 0.02em;
-  text-align: left;
-  margin-right: 75px;
-}
-
 .close {
   font-size: 2rem !important;
   font-weight: 100;
@@ -85,7 +106,7 @@ input#inputPhone {
   color: #ededed;
 }
 
-#phoneHelp {
+.phoneHelp {
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 600;
@@ -98,16 +119,17 @@ input#inputPhone {
 #confirm-vehicle,
 #confirm-pay {
   padding: 6px 6px;
-  margin-top: 1rem;
-  height: 56px;
-  border: 1px solid var(--primary-red-500, #DA291C);
-  background: var(--primary-red-800, #57100B);
+  margin-top: 38px;
+  height: 48px;
+  border: 2px solid var(--neutral-graphite-700, #373737);
+  background: var(--neutral-graphite-600, #474747);
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 700;
-  color: var(--text-neutral-strong, #EDEDED);
+  color: var(--text-neutral-strong, #ededed);
   text-transform: uppercase;
   width: 100%;
+  border-radius: inherit;
 }
 
 .redirect-links {
@@ -147,25 +169,13 @@ input#inputPhone {
 }
 
 /*forms [END]*/
-.digit-group input {
-  width: 70px;
-  height: 48px;
-  text-align: center;
-  color: white;
-  background: linear-gradient(0deg, #373737, #373737);
-  padding: 16px;
-  border: 1px solid #616161;
-  margin: 2.5px;
-}
-
-#resendOtp {
+.resendOtp {
   font-family: Montserrat;
   font-size: 12px;
-  color: var(--text-neutral-strong, #EDEDED) !important;
+  color: var(--primary-red-500, #da291c) !important;
   font-size: 14px;
   font-weight: 400;
   text-align: end;
-  margin-left: 377px;
 }
 
 #timeElmWrapper {
@@ -173,7 +183,7 @@ input#inputPhone {
 }
 
 .pc-details,
-#motor-reg-no,
+.motor-reg-no,
 #chassis-no,
 #km-reading,
 #vehicle-regd-num {
@@ -586,7 +596,7 @@ p.contract-terms {
 }
 
 #tnc-submit,
-#regd-motorcycle-submit {
+.regd-motorcycle-submit {
   color: #ededed;
   text-transform: none;
   font-size: 16px;
@@ -597,8 +607,8 @@ p.contract-terms {
   padding: 6px 12px 6px 12px;
   margin-top: 1rem;
   height: 56px;
-  border: 1px solid var(--primary-red-500, #DA291C);
-  background: var(--primary-red-800, #57100B);
+  border: 1px solid var(--primary-red-500, #da291c);
+  background: var(--primary-red-800, #57100b);
   border-radius: 0;
 }
 
@@ -655,7 +665,7 @@ p.contract-terms {
   background: linear-gradient(0deg, #403b29, #403b29), linear-gradient(0deg, #847543, #847543);
 }
 
-.regd-motor-header #modalTitle {
+.regd-motor-header .modalTitle {
   font-size: 32px;
   line-height: 38px;
 }
@@ -708,12 +718,12 @@ p.contract-terms {
 
 .rsa-modal-title,
 .view-chassis-header-title {
-  font-size: 40px !important;
+  font-size: 25px !important;
   line-height: 48px !important;
 }
 
 .back-btn {
-  height: 3rem;
+  height: 2.7rem;
 }
 
 .view-chessis-img {
@@ -886,7 +896,7 @@ button#edit-details-submit {
 }
 
 .success-redirect {
-  color: #FD5050;
+  color: #fd5050;
   margin-top: -1rem;
   font-family: Montserrat;
   font-size: 14px;
@@ -895,7 +905,7 @@ button#edit-details-submit {
 }
 
 p.success-footer-title {
-  color: #CACACA;
+  color: #cacaca;
   font-size: 12px;
   font-weight: 400;
   line-height: 17px;
@@ -926,7 +936,7 @@ p.success-footer-title > span {
   --bs-btn-hover-color: #fff;
   /* --bs-btn-hover-bg: #5c636a; */
   /* --bs-btn-hover-border-color: #565e64; */
-  --bs-btn-focus-shadow-rgb: 130,138,145;
+  --bs-btn-focus-shadow-rgb: 130, 138, 145;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #565e64;
   --bs-btn-active-border-color: #51585e;
@@ -945,14 +955,68 @@ p.success-footer-title > span {
   padding-right: 143px;
 }
 
-.otpverify {
-  margin-right: 236px;
-}
-
 .btn-primary {
   margin-top: 24px;
 }
 
-.closebtn {
-  background-color: none;
+@media screen and (min-width: 769px) {
+  .digit-group input {
+    width: 70px;
+    height: 48px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(0deg, #373737, #373737);
+    padding: 16px;
+    border: 1px solid #616161;
+    margin: 2.5px;
+    border-radius: inherit;
+  }
+}
+@media screen and (max-width: 767px) {
+  .digit-group input {
+    width: 54px;
+    height: 48px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(0deg, #373737, #373737);
+    padding: 16px;
+    border: 1px solid #616161;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .otyverify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .closebtn {
+    margin-left: 236px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .otyverify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.regd-motor-header {
+  display: flex;
+}
+
+.otp-input {
+  text-align: center;
+  font-size: 1.5rem;
+  height: 50px;
+  margin: 4px;
+}
+
+@media (max-width: 576px) {
+  .otp-input {
+    width: 100%;
+    margin: 4px 0;
+  }
 }/*# sourceMappingURL=ChasisNumber.css.map */
