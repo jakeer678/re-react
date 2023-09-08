@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { contextStore } from "../context/Contextstore";
 import Modal from "react-bootstrap/Modal";
 const VerifyNumber = () => {
-  const [inputNumber, setInputNumber] = useState("+91");
+  const [inputNumber, setInputValue] = useState("+91");
   const redirect = useNavigate();
   const { show, handleShow, handleClose } = useContext(contextStore);
 

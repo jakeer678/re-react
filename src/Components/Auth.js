@@ -7,7 +7,7 @@ import "../Styles/Auth.css";
 import Modal from "react-bootstrap/Modal";
 import { contextStore } from "../context/Contextstore";
 const Auth = () => {
-  const [inputNumber, setInputNumber] = useState("+91");
+  const [inputNumber, setInputValue] = useState("+91");
   const { show, handleShow, handleClose } = useContext(contextStore);
   const redirect = useNavigate();
   const sendOtpAuth = () => {
