@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import "../Styles/ChasisNumber.css";
 import meteor50 from "../assets/Images/METEOR350.svg";
 import himalayan from "../assets/Images/HIMALAYAN.svg";
 import classic from "../assets/Images/CLASSIC350.svg";
@@ -31,7 +30,7 @@ const RegisterMotor = () => {
           id="registerModal"
         >
           <div className="modal-header">
-            <h5 className="modal-titles modalTitle">Registered Motorcycle</h5>
+            <h5 className="modal-titles">Registered Motorcycle</h5>
 
             <span onClick={handleClose} className="closebtnchasis">
               &times;

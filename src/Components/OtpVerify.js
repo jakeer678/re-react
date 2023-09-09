@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import chevron from "../assets/Images/chevron_left.svg";
 import chasis from "../assets/Images/view-chessis.svg";
-import "../Styles/ChasisNumber.css";
 import { useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import "../Styles/Otpverify.css";

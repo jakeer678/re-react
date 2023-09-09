@@ -7,7 +7,10 @@
   text-align: left;
 }
 
-
+.modal-header {
+  border: none;
+  padding: 0 0 1rem;
+}
 
 @media screen and (min-width: 769px) {
   .modal-title {
@@ -30,3 +33,132 @@
         font-size: 20px;
     }
   }
+
+
+
+ 
+.modal-header {
+  border: none;
+  padding: 0 0 1rem;
+}
+
+.redirect-links {
+  color: #da291c;
+  margin: 0 4px;
+}
+.continue-with {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.login-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 219.5px;
+  padding: 8px 10px;
+  background: #282828;
+  border: 1px solid #616161;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ededed;
+}
+#ext-login-btns {
+  display: flex;
+  justify-content: space-between;
+}
+.login-btns img {
+  margin: 0 5px;
+}
+/*forms [END]*/
+
+//otp verification [START]
+
+$BaseBG: #0f0f1a;
+
+.resendOtp {
+  font-family: Montserrat;
+  font-size: 12px;
+  color: var(--primary-red-500, #da291c) !important;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: end;
+}
+#timeElmWrapper {
+  color: #ededed;
+}
+
+
+@media screen and (min-width: 769px) {
+  .digit-group {
+    input {
+      width: 70px;
+      height: 48px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(0deg, #373737, #373737);
+      padding: 16px;
+      border: 1px solid #616161;
+      margin: 2.5px;
+      border-radius: inherit;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .digit-group input {
+    width: 19px;
+    height: 38px;
+    background: linear-gradient(0deg, #373737, #373737);
+    border: 1px solid #616161;
+    display: flex;
+    align-items: center;
+
+    border-radius: inherit;
+    padding-left: 35px;
+    padding-right: 1px;
+    width: 100%;
+  }
+}
+
+//otpverify component
+@media screen and (min-width: 769px) {
+  .otyverify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .otyverify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}
+
+.regd-motor-header {
+  display: flex;
+}
+
+.otp-input {
+  text-align: center;
+  font-size: 1.5rem;
+  height: 50px;
+  margin: 4px;
+}
+
+@media (max-width: 576px) {
+  .otp-input {
+    width: 100%;
+    margin: 4px 0;
+  }
+}
+@media screen and (min-width: 576px) {
+  .vertical-line-mark img {
+    display: none;
+  }
+}

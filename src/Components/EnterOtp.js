@@ -24,21 +24,20 @@ const EnterOtp = () => {
           </div>
           <div className="modal-body">
             <form>
-              <div className="form-group">
-                <label htmlFor="inputPhone">Please enter your phone no.</label>
-                <input
-                  type="tel"
-                  value={inputNumber}
-                  className="form-control"
-                  id="inputPhone"
-                  placeholder="Enter Phone"
-                  maxLength="14"
-                  onChange={(e) => e.target.value}
-                />
-                <small className="form-text text-muted phoneHelp">
-                  6-digit OTP will be sent to this phone number
-                </small>
-              </div>
+              <label htmlFor="inputPhone">Please enter your phone no.</label>
+              <input
+                type="tel"
+                value={inputNumber}
+                className="form-control"
+                id="inputPhone"
+                placeholder="Enter Phone"
+                maxLength="14"
+                onChange={(e) => e.target.value}
+              />
+              <p className="form-text text-muted phoneHelp">
+                6-digit OTP will be sent to this phone number
+              </p>
+
               <button
                 id="sendOtp"
                 type="submit"

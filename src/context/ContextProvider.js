@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { contextStore } from "./Contextstore";
 
 const ContextProvider = (props) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const openModal = () => {

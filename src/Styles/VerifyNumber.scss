@@ -1,4 +1,7 @@
-
+.modal-header {
+  border: none;
+  padding: 0 0 1rem;
+}
 
 .modalheader {
   font-family: Guardian Sans XCond;
@@ -8,8 +11,6 @@
   letter-spacing: 0.02em;
   text-align: left;
 }
-
-
 
 
 #sendOtps,
@@ -30,3 +31,5 @@
     width: 100%;
     border-radius: inherit;
   }
+
+

@@ -37,3 +37,147 @@
     border-radius: inherit;
   }
 }
+
+
+
+.modalheader {
+  font-family: Guardian Sans XCond;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+
+.modal-title .modalheader {
+  margin-bottom: 0;
+  line-height: var(--bs-modal-title-line-height);
+  font-family: Guardian Sans XCond;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.56px;
+}
+
+.closebtnchasis {
+  scale: 2.4;
+  cursor: pointer;
+}
+.modal-header {
+  border: none;
+  padding: 0 0 1rem;
+}
+
+.modal-body {
+  padding: 0;
+}
+button.close {
+  color: #ffffff;
+}
+.break {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(55, 55, 55, 1);
+  line-height: 0.1em;
+  margin: 20px 0 30px;
+}
+.break span {
+  background: #282828;
+  padding: 0 10px;
+  color: #ffffff66;
+}
+#ext-login-btns {
+  display: flex;
+}
+input#inputPhone {
+  background: linear-gradient(0deg, #373737, #373737);
+  border: 1px solid #616161;
+  color: #fff;
+  height: 48px;
+  border-radius: 0;
+}
+#inputPhone::placeholder {
+  color: #fff;
+}
+
+.close {
+  font-size: 2rem !important;
+  font-weight: 100;
+  line-height: 1;
+  color: #000;
+  text-shadow: none;
+  opacity: 1 !important;
+}
+.close:focus,
+.close:hover {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.75;
+}
+.modal-body {
+  label {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ededed;
+  }
+}
+.phoneHelp {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ededed !important;
+}
+#sendOtp,
+#verifyOtp,
+#confirm-signup,
+#confirm-vehicle,
+#confirm-pay {
+  padding: 6px 6px;
+  margin-top: 38px;
+  height: 48px;
+  border: 2px solid var(--neutral-graphite-700, #373737);
+  background: var(--neutral-graphite-600, #474747);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-neutral-strong, #ededed);
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: inherit;
+}
+.redirect-links {
+  color: #da291c;
+  margin: 0 4px;
+}
+.continue-with {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.login-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 219.5px;
+  padding: 8px 10px;
+  background: #282828;
+  border: 1px solid #616161;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ededed;
+}
+#ext-login-btns {
+  display: flex;
+  justify-content: space-between;
+}
+.login-btns img {
+  margin: 0 5px;
+}
+
+

@@ -8,6 +8,7 @@ import MotorDetails from "../Components/MotorDetails";
 import ChasisNumber from "../Components/ChasisNumber";
 import EnterOtp from "../Components/EnterOtp";
 import Banner from "../Components/Banner";
+import Header from "../Components/Header";
 
 const Routing = () => {
   return (
@@ -16,6 +17,7 @@ const Routing = () => {
         <Route
           element={
             <div>
+              <Header />
               <Banner />
               <Outlet />
             </div>

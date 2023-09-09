@@ -23,37 +23,29 @@ const VerifyNumber = () => {
     <>
       <section>
         <div>
-          <Modal
-            show={show}
-            animation={false}
-            className="modelcontent"
-            onHide={handleClose}
-          >
+          <Modal show={show} animation={false} onHide={handleClose}>
             <div className="modal-header">
               <h5 className="modal-title modalheader">Login or Signup</h5>
               <span onClick={handleClose} className="closebtnchasis">
-              &times;
-            </span>
+                &times;
+              </span>
             </div>
             <div className="modal-body">
               <form>
-                <div className="form-group">
-                  <label htmlFor="inputPhone">
-                    Please enter your phone no.
-                  </label>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="inputPhone"
-                    placeholder="Enter Phone"
-                    maxLength="14"
-                    value={inputNumber}
-                    onChange={handleInputChange}
-                  />
-                  <small className="form-text text-muted phoneHelp">
-                    6-digit OTP will be sent to this phone number
-                  </small>
-                </div>
+                <label htmlFor="inputPhone">Please enter your phone no.</label>
+                <input
+                  type="tel"
+                  className="form-control"
+                  id="inputPhone"
+                  placeholder="Enter Phone"
+                  maxLength="14"
+                  value={inputNumber}
+                  onChange={handleInputChange}
+                />
+                <small className="form-text text-muted phoneHelp">
+                  6-digit OTP will be sent to this phone number
+                </small>
+
                 <button
                   id="sendOtp"
                   type="submit"

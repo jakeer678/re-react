@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import chevron from "../assets/Images/chevron_left.svg";
 import info from "../assets/Images/info.svg";
-import "../Styles/ChasisNumber.css";
 import { useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import { contextStore } from "../context/Contextstore";
