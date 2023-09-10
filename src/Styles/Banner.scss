@@ -1,10 +1,147 @@
 /*Banner [START]*/
-.banner-main {
+
+#banner {
+  margin-top: 90px;
+}
+
+.banner-main #banner {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.banner-main .banner-content {
+  display: flex;
+}
+.banner-main .banner-strip {
+  margin-top: 20px;
+}
+.banner-main p.banner-title {
+  /* font-family: Guardian Sans XCond; */
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: 0.02em;
+}
+.banner-main img.banner-strip {
+  width: 182px;
+  height: 19px;
+}
+.banner-main .banner-desc {
+  width: 390px;
+  height: 81px;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 12px 0 24px;
+  color: #ededed;
+  text-align: left;
+}
+.banner-main .banner-img {
+  margin: 50px auto;
+}
+.banner-main .banner-wrapper {
+  margin-left: 40px;
+}
+.banner-main .desc-imp {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22.5px;
+}
+.banner-main button.explore-btn {
+  font-family: Montserrat;
+  background: #57100b;
+  color: #ededed;
+  border: 1px solid rgb(218, 41, 28);
+  padding: 0;
+  padding-left: 19px;
+}
+.banner-main .arrow-right {
+  background: linear-gradient(0deg, #da291c, #da291c),
+    linear-gradient(0deg, #57100b, #57100b);
+  height: 56px;
+}
+
+/*Banner [END]*/
+
+// responsive screen--- XS
+@media screen and (max-width: 768px) {
+  .banner-main {
+    background-position: inherit;
+    padding: 5%;
+  }
+  .banner-main::before {
+    background-image: linear-gradient(
+      180deg,
+      rgba(24, 24, 24, 0) 38.64%,
+      #181818 88.39%
+    );
+  }
+  .banner-main .banner-strip {
+    display: none;
+  }
+  .banner-main #banner {
+    display: block;
+  }
+  .banner-main p.banner-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+  }
+  .banner-main .banner-desc {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    width: auto;
+    height: auto;
+  }
+  .banner-main .banner-wrapper {
+    margin-left: 0;
+  }
+  .banner-main .desc-imp {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16.8px;
+  }
+  .banner-main button.explore-btn {
+    font-size: 12px;
+    font-weight: 600;
+    display: none;
+  }
+
+  .banner-main .banner-img {
+    margin: 0 auto;
+  }
+  .banner-main .banner-img img {
+    width: 100%;
+  }
+  .banner-main {
     background-image: url(../assets/Images/background.svg);
     background-size: cover;
     background-position: center;
     position: relative;
     background-repeat: no-repeat;
+    background: var(--background-neutral-semi-strong, #181818);
+  }
+  #banner .banner-img img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .banner-main {
+    background-image: url(../assets/Images/background.svg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+  .banner-main .arrow_right {
+    margin-left: 22px;
+  }
+  #banner .banner-img img {
+    width: 80%;
   }
   .banner-main::before {
     content: "";
@@ -14,201 +151,85 @@
     width: 100%;
     height: 100%;
     background-image: linear-gradient(
-      182.95deg,
+      180deg,
       rgba(24, 24, 24, 0) 38.64%,
       #181818 88.39%
     );
     z-index: 1;
   }
-  .banner-main #banner {
-    display: flex;
-    align-items: center;
-    color: #fff;
-  }
-  .banner-main .banner-content {
-    display: flex;
+}
+// responsive screen--- SM
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .banner-main {
+    background-position: inherit;
+    padding: 5%;
+    padding-left: 0;
   }
   .banner-main .banner-strip {
-    margin-top: 20px;
+    display: none;
   }
-  .banner-main p.banner-title {
-    /* font-family: Guardian Sans XCond; */
-    font-size: 48px;
+  .banner-main #banner {
+    display: flex;
+  }
+  .banner-main button.explore-btn {
+    font-size: 12px;
     font-weight: 600;
-    line-height: 58px;
-    letter-spacing: 0.02em;
+    display: block;
   }
-  .banner-main img.banner-strip {
-    width: 182px;
-    height: 19px;
-  }
-  .banner-main .banner-desc {
-    width: 390px;
-    height: 81px;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 22px;
-    margin: 12px 0 24px;
-    color: #ededed;
-    text-align: left;
+  .banner-main .arrow_right {
+    height: 40px;
   }
   .banner-main .banner-img {
-    margin: 50px auto;
+    margin: 0 auto;
+  }
+  .banner-main .banner-img img {
+    width: 100%;
+  }
+}
+
+// responsive screen--- M
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .banner-main {
+    background-position: inherit;
+    padding: 5% 0;
+  }
+  .banner-main .banner-strip {
+    display: block;
+  }
+  .banner-main #banner {
+    display: flex;
+    padding-right: 40px;
   }
   .banner-main .banner-wrapper {
     margin-left: 40px;
   }
-  .banner-main .desc-imp {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 22.5px;
-  }
   .banner-main button.explore-btn {
-    font-family: Montserrat;
-    background: #57100b;
-    color: #ededed;
-    border: 1px solid rgb(218, 41, 28);
-    padding: 0;
-    padding-left: 19px;
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
   }
-  .banner-main .arrow-right {
-    background: linear-gradient(0deg, #da291c, #da291c),
-      linear-gradient(0deg, #57100b, #57100b);
-    height: 56px;
-  }
-  .banner-main .arrow_right {
-    margin-left: 19px;
-  }
-  /*Banner [END]*/
-  
-  // responsive screen--- XS
-  @media screen and (max-width: 768px) {
-    .banner-main {
-      background-position: inherit;
-      padding: 5%;
-    }
-    .banner-main .banner-strip {
-      display: none;
-    }
-    .banner-main #banner {
-      display: block;
-    }
-    .banner-main p.banner-title {
-      font-size: 28px;
-      font-weight: 600;
-      line-height: 34px;
-    }
-    .banner-main .banner-desc {
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 17px;
-      width: auto;
-      height: auto;
-    }
-    .banner-main .banner-wrapper {
-      margin-left: 0;
-    }
-    .banner-main .desc-imp {
-      color: #fff;
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 16.8px;
-    }
-    .banner-main button.explore-btn {
-      font-size: 12px;
-      font-weight: 600;
-      display: none;
-    }
-    .banner-main .arrow_right {
-      height: 40px;
-    }
-    .banner-main .banner-img {
-      margin: 0 auto;
-    }
-    .banner-main .banner-img img {
-      width: 100%;
-    }
-  }
-  
-  // responsive screen--- SM
-  @media screen and (min-width: 769px) and (max-width: 992px) {
-    .banner-main {
-      background-position: inherit;
-      padding: 5%;
-      padding-left: 0;
-    }
-    .banner-main .banner-strip {
-      display: none;
-    }
-    .banner-main #banner {
-      display: flex;
-    }
-    .banner-main button.explore-btn {
-      font-size: 12px;
-      font-weight: 600;
-      display: block;
-    }
-    .banner-main .arrow_right {
-      height: 40px;
-    }
-    .banner-main .banner-img {
-      margin: 0 auto;
-    }
-    .banner-main .banner-img img {
-      width: 100%;
-    }
-  }
-  
-  // responsive screen--- M
-  @media screen and (min-width: 993px) and (max-width: 1200px) {
-    .banner-main {
-      background-position: inherit;
-      padding: 5% 0;
-    }
-    .banner-main .banner-strip {
-      display: block;
-  }
-    .banner-main #banner {
-      display: flex;
-      padding-right: 40px;
-    }
-    .banner-main .banner-wrapper {
-      margin-left: 40px;
-    }
-    .banner-main button.explore-btn {
-      font-size: 12px;
-      font-weight: 600;
-      display: block;
-    }
-    .banner-main .arrow_right {
-      height: 40px;
-    }
-    .banner-main .banner-img {
-      margin: 0 auto;
-    }
-    .banner-main .banner-img img {
-      width: 100%;
-    }
-  }
-  // responsive screen--- L-xl
-  @media screen and (min-width: 1201px) {
-    .banner-main {
-      background-position: inherit;
-      padding: 5% 0;
-    }
-    .banner-main .banner-strip {
-      display: block;
-  }
-    .banner-main .banner-img {
-      margin: 0 auto;
-    }
-    .banner-main .banner-img img {
-      width: 100%;
-    }
-  }
-  
 
-  .banner-wrapper {
-    z-index: 2;
+  .banner-main .banner-img {
+    margin: 0 auto;
   }
+}
+// responsive screen--- L-xl
+@media screen and (min-width: 1201px) {
+  .banner-main {
+    background-position: inherit;
+    padding: 5% 0;
+  }
+  .banner-main .banner-strip {
+    display: block;
+  }
+  .banner-main .banner-img {
+    margin: 0 auto;
+  }
+  .banner-main .banner-img img {
+    width: 100%;
+  }
+}
+
+.banner-wrapper {
+  z-index: 2;
+}

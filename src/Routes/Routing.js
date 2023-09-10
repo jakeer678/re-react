@@ -15,6 +15,7 @@ const Routing = () => {
     <Fragment>
       <Routes>
         <Route
+          exact path="/"
           element={
             <div>
               <Header />
@@ -23,7 +24,6 @@ const Routing = () => {
             </div>
           }
         >
-          <Route path="/" element={<Banner />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/verifyNumber" element={<VerifyNumber />} />
           <Route path="/enterOtp" element={<EnterOtp />} />

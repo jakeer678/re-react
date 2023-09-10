@@ -15,12 +15,14 @@ const MotorDetails = () => {
     <>
       <section>
         <Modal show={show} animation={false} onHide={handleClose}>
-        <div className="modal-header">
-              <h5 className="modal-title modalheader">Enter Motorcycle Details</h5>
-              <span onClick={handleClose} className="closebtnchasis">
-                &times;
-              </span>
-            </div>
+          <div className="modal-header">
+            <h5 className="modal-title modalheader">
+              Enter Motorcycle Details
+            </h5>
+            <span onClick={handleClose} className="closebtnchasis">
+              &times;
+            </span>
+          </div>
           <div className="modal-body">
             <form>
               <div className="vehicle-details-form">
@@ -50,9 +52,9 @@ const MotorDetails = () => {
               </div>
             </form>
             <button
-              id="confirm-vehicle"
+         
               type="submit"
-              className="btn btn-block disableOtp"
+              className="motorDeatailbtn"
               onClick={motorDetails}
             >
               Verify &nbsp;and &nbsp;Continue

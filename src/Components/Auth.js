@@ -5,11 +5,13 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "../Styles/Auth.css";
 import Modal from "react-bootstrap/Modal";
 import { contextStore } from "../context/Contextstore";
+
 const Auth = () => {
-  const [inputNumber, setInputValue] = useState("+91");
+  const [inputNumber, setInputValue] = useState("+91"); // Add "|" after "+91"
   const { show, handleShow, handleClose } = useContext(contextStore);
   const redirect = useNavigate();
   const sendOtpAuth = () => {
+    
     redirect("/verifyNumber");
   };
   const handleInputChange = (event) => {
@@ -30,15 +32,20 @@ const Auth = () => {
             <div className="modal-body">
               <form>
                 <label htmlFor="inputPhone">Please enter your phone no.</label>
-                <input
-                  type="tel"
-                  className="form-control"
-                  id="inputPhone"
-                  placeholder="Enter Phone"
-                  maxLength="14"
-                  value={inputNumber}
-                  onChange={handleInputChange}
-                />
+                <div className="input-group">
+                  <input
+                    type="tel"
+                    className="form-control"
+                    id="inputPhone"
+                    placeholder="Enter Phone"
+                    maxLength="14"
+                    value={inputNumber}
+                    onChange={handleInputChange}
+                  />
+                  {/* <div className="input-group-append">
+                    <span className="input-group-text">|</span>
+                  </div> */}
+                </div>
                 <small className="form-text text-muted phoneHelp">
                   6-digit OTP will be sent to this phone number
                 </small>

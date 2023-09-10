@@ -5,6 +5,7 @@ import iconBox from "../assets/Images/icon box.svg";
 import bannerVideo from "../assets/Images/banner-video.svg";
 import { contextStore } from "../context/Contextstore";
 import { useNavigate } from "react-router-dom";
+import { BannerPlan } from "./BannerPlan";
 
 const Banner = () => {
   const { handleShow, handleClose, openModal } = useContext(contextStore);
@@ -26,7 +27,7 @@ const Banner = () => {
                 <p className="banner-title">Ride Sure</p>
                 <p className="banner-desc">
                   Get hassle-free ownership experience with
-                  <span className="desc-imp">Ride Sure</span>. Choose your
+                  <span className="desc-imp"> Ride Sure</span>. Choose your
                   package based on your riding style and usage.
                 </p>
                 <button onClick={openLoginmodal} className="explore-btn">
@@ -49,6 +50,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
+        <BannerPlan />
       </section>
     </>
   );

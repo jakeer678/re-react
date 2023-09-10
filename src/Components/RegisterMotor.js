@@ -9,7 +9,12 @@ import { contextStore } from "../context/Contextstore";
 import Modal from "react-bootstrap/Modal";
 import "../Styles/RegisterMotor.css";
 const RegisterMotor = () => {
-  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedColor, setSelectedColor] = useState({
+    red: false,
+    blue: false,
+    green: false,
+    other: false,
+  });
   const redirect = useNavigate();
   const { show, handleShow, handleClose } = useContext(contextStore);
 
@@ -17,9 +22,19 @@ const RegisterMotor = () => {
     redirect("/motorDetails");
   };
 
-  const handleColorChange = (event) => {
-    setSelectedColor(event.target.value);
+  const handleColorChange = (color) => {
+    setSelectedColor({
+      red: color === "red",
+      blue: color === "blue",
+      green: color === "green",
+      other: color === "other",
+    });
   };
+  
+  const containerStyle = (color) => ({
+    backgroundColor: selectedColor[color] ? 'var(--secondary-gold-gold-800, #403B29)' : '#373737',
+  });
+
   return (
     <>
       <section>
@@ -31,24 +46,23 @@ const RegisterMotor = () => {
         >
           <div className="modal-header">
             <h5 className="modal-titles">Registered Motorcycle</h5>
-
-            <span onClick={handleClose} className="closebtnchasis">
+            <div onClick={handleClose} className="closebtnchasisreg">
               &times;
-            </span>
+            </div>
           </div>
           <p className="regd-title">
-            Select the motorcycle to view personalised plans
+            Select the motorcycle to view personalized plans
           </p>
           <div className="modal-body">
             <div id="regd-motor-wrapper">
-              <div className="regd-motorcycles">
+              <div className="regd-motorcycles" style={containerStyle("red")}>
                 <input
                   type="radio"
                   id="red"
                   name="color"
                   value="red"
-                  onChange={handleColorChange}
-                  checked={selectedColor === "red"}
+                  onChange={() => handleColorChange("red")}
+                  checked={selectedColor.red}
                 />
                 <label htmlFor="red">
                   METEOR 350
@@ -57,51 +71,60 @@ const RegisterMotor = () => {
                 <img src={meteor50} alt="meteor-bike" className="meteor-bike" />
               </div>
 
-              <div className="regd-motorcycles">
-                <input type="radio" name="option" />
-                <label htmlFor="option2">
+              <div className="regd-motorcycles" style={containerStyle("blue")}>
+                <input
+                  type="radio"
+                  id="blue"
+                  name="color"
+                  value="blue"
+                  onChange={() => handleColorChange("blue")}
+                  checked={selectedColor.blue}
+                />
+                <label htmlFor="blue">
                   HIMALAYAN
                   <p className="motor-num">TN 22 DM 7518</p>
                 </label>
-                <img
-                  src={himalayan}
-                  alt="himalayan-bike"
-                  className="himalayan-bike"
-                />
+                <img src={himalayan} alt="himalayan-bike" className="himalayan-bike" />
               </div>
 
-              <div className="regd-motorcycles">
-                <input type="radio" name="option" />
-                <label htmlFor="option3">
+              <div className="regd-motorcycles" style={containerStyle("green")}>
+                <input
+                  type="radio"
+                  id="green"
+                  name="color"
+                  value="green"
+                  onChange={() => handleColorChange("green")}
+                  checked={selectedColor.green}
+                />
+                <label htmlFor="green">
                   CLASSIC 350
                   <p className="motor-num">TN 22 DM 7518</p>
                 </label>
-                <img
-                  src={classic}
-                  alt="CLASSIC350"
-                  className="classic350-bike"
-                />
+                <img src={classic} alt="CLASSIC350" className="classic350-bike" />
               </div>
               <div className="break">
                 <span>Or</span>
               </div>
-              <div className="regd-motorcycles">
-                <input type="radio" name="option" />
-                <label htmlFor="option4">
+              <div className="regd-motorcycles" style={containerStyle("other")}>
+                <input
+                  type="radio"
+                  id="other"
+                  name="color"
+                  value="other"
+                  onChange={() => handleColorChange("other")}
+                  checked={selectedColor.other}
+                />
+                <label htmlFor="other">
                   View Plans for Another <br />
                   Motorcycle
                 </label>
-                <img
-                  src={anotherModel}
-                  alt="other-bike"
-                  className="other-bike"
-                />
+                <img src={anotherModel} alt="other-bike" className="other-bike" />
               </div>
             </div>
           </div>
           <button
             type="submit"
-            className="btn btn-block mt-4 regd-motorcycle-submit"
+            className="verifybtn"
             onClick={registerMotor}
           >
             CONTINUE

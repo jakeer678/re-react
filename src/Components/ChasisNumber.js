@@ -34,14 +34,14 @@ const ChasisNumber = () => {
             </p>
             <div className="sub-body-title-bottom-border"></div>
             <p className="chesis-view-zoomed">MALPC8131LLM109314</p>
-
+            <div className="veritcalarrow"></div>
             <img
               src={chasisnum}
               alt="view-chessis-img"
               className="view-chessis-img"
             />
             <div className="vertcalLine">
-              <div className="vertical-line"></div>
+              <div className="veritcalarrow-bottom"></div>
               <div className="vertical-line-mark">
                 <img
                   src={Frame}

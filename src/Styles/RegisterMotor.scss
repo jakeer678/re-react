@@ -1,4 +1,3 @@
-
 .modal-header {
   border: none;
   padding: 0 0 1rem;
@@ -7,7 +6,14 @@
 .regd-motor-header {
   display: flex;
 }
-
+.regd-title {
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 20px;
+  color: #a7a7a7;
+  margin-top: -10px;
+  margin-bottom: 22px;
+}
 .modalheader {
   font-family: Guardian Sans XCond;
   font-size: 24px;
@@ -28,116 +34,29 @@
   line-height: 120%;
   letter-spacing: 0.8px;
 }
-@media screen and (min-width: 769px) {
-  .modal-titles {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .modal-content #registerModal {
-    width: 100%;
-    color: var(--text-neutral-strong, #ededed) !important;
-    border-radius: inherit !important;
-    background: linear-gradient(
-      172deg,
-      rgba(0, 0, 0, 0.32) 6.45%,
-      rgba(0, 0, 0, 0.88) 52.72%
-    ) !important;
-  }
-  .modal-titles {
-    font-size: 21px;
-  }
-}
 
-
-
-#sendOtp,
-#verifyOtp,
-#confirm-signup,
-#confirm-vehicle,
-#confirm-pay {
-  padding: 6px 6px;
-  margin-top: 38px;
-  height: 48px;
-  border: 2px solid var(--neutral-graphite-700, #373737);
-  background: var(--neutral-graphite-600, #474747);
+.motor-num {
+  color: #a7a7a7;
   font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-neutral-strong, #ededed);
-  text-transform: uppercase;
-  width: 100%;
-  border-radius: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .modal-body {
-  .toaster {
+  label {
     font-family: Montserrat;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    background: #5f583e;
-    margin: 2rem 0 3rem;
-    padding: 10px;
-    display: flex;
-    align-items: baseline;
-  }
-  .reg-fail-toast {
-    margin-left: 0.5rem;
-  }
-  .selected-vehicle {
-    width: 90%;
-    margin: 2rem auto 0rem;
-    text-align: right;
-  }
-  .cruiser-text-bg {
-    width: 100%;
-  }
-  .selected-cruiser {
-    margin-top: -6rem;
-    width: 95%;
-    box-shadow: 0px 177px 118px -81px rgb(145 142 142 / 24%);
-  }
-  .key-details-cards {
-    background: linear-gradient(
-      180deg,
-      rgba(24, 24, 24, 0) 0%,
-      rgba(24, 24, 24, 0.32) 86.32%
-    );
-    border: 0.5px solid #373737;
-    width: 48%;
-    padding: 1rem;
-  }
-  #key-motor-details {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
-  .motor-details-title {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 400;
-    color: #a7a7a7;
-    line-height: 17px;
-    padding: 0.4rem 0;
-  }
-  p.motor-details-desc {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-  }
-  .motor-details-wrap > p {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
+    font-weight: 500;
+    color: #ededed;
   }
 }
-
-
-
-
+.phoneHelp {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ededed !important;
+}
 #tnc-submit,
 .regd-motorcycle-submit {
   color: #ededed;
@@ -158,7 +77,6 @@
   display: flex;
   justify-content: space-between;
   padding-left: 1rem;
-  background: #373737;
   height: 96px;
   margin-bottom: 1.5rem;
 }
@@ -175,7 +93,7 @@
   cursor: pointer;
   margin: 1rem 0;
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 22px;
 }
@@ -190,65 +108,60 @@
   border: 2px solid #fff; /* Change color to your preference */
   border-radius: 50%;
 }
-
-/* Inner circle for checked indicator */
-.regd-motorcycles input[type="radio"]:checked + label::after {
-  content: "";
-  position: absolute;
-  left: 4.5px;
-  top: 8.3px;
-  width: 11px;
-  height: 11px;
-  background-color: #fff; /* Change color to your preference */
-  border-radius: 50%;
+.closebtnchasisreg {
+  margin-bottom: 15px !important;
+  scale: 2.4;
 }
-.regd-motorcycles.selected {
-  background: linear-gradient(0deg, #403b29, #403b29),
-    linear-gradient(0deg, #847543, #847543);
-}
-.regd-motor-header .modalTitle {
-  font-size: 32px;
-  line-height: 38px;
-}
-.regd-title {
+.verifybtn {
+  border: 1px solid var(--primary-red-500, #da291c) !important;
+  background: var(--primary-red-800, #57100b) !important;
+  padding: 6px 6px;
+  margin-top: 38px;
+  height: 48px;
   font-family: Montserrat;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #a7a7a7;
-  margin: 10px 0;
+  font-weight: 700;
+  color: var(--text-neutral-strong, #ededed);
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: inherit;
+}
+@media screen and (min-width: 769px) {
+  .modal-titles {
+    font-size: 30px;
+  }
+  .regd-title {
+    font-size: 14px;
+  }
+  .regd-motorcycles {
+    background: #373737;
+  }
 }
 
-.btn-secondary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #6c757d;
-  --bs-btn-border-color: #6c757d;
-  --bs-btn-hover-color: #fff;
-  /* --bs-btn-hover-bg: #5c636a; */
-  /* --bs-btn-hover-border-color: #565e64; */
-  --bs-btn-focus-shadow-rgb: 130, 138, 145;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #565e64;
-  --bs-btn-active-border-color: #51585e;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #6c757d;
-  --bs-btn-disabled-border-color: #6c757d;
+@media screen and (max-width: 768px) {
+  .modal-content #registerModal {
+    width: 100%;
+    color: var(--text-neutral-strong, #ededed) !important;
+    border-radius: inherit !important;
+    background: linear-gradient(
+      172deg,
+      rgba(0, 0, 0, 0.32) 6.45%,
+      rgba(0, 0, 0, 0.88) 52.72%
+    ) !important;
+  }
+  .modal-titles {
+    font-size: 21px;
+  }
+  .regd-motorcycles img {
+    width: 50%;
+  }
+  .regd-motorcycles .himalayan-bike {
+    width: 45% !important;
+  }
+  .regd-title {
+    font-size: 13px;
+  }
+  .regd-motorcycles {
+    border: 1px solid var(--neutral-graphite-700, #373737);
+  }
 }
-
-.closebtnsmotors {
-  margin-bottom: 44px;
-}
-
-#confirm-vehicle {
-  padding-left: 131px;
-  padding-right: 143px;
-}
-
-.btn-primary {
-  margin-top: 24px;
-}
-
-
-
-

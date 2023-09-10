@@ -7,33 +7,6 @@
   text-align: left;
 }
 
-@media screen and (max-width: 768px) {
-  .modal-content {
-    width: 100%;
-    height: 150vh;
-    color: var(--text-neutral-strong, #EDEDED);
-    border-radius: 16px 16px 0px 0px;
-    background: var(--background-strong-neutral-900, #000);
-    box-shadow: 0px -4px 40px 0px rgba(218, 41, 28, 0.04);
-    border-radius: inherit;
-  }
-}
-.closebtn {
-  background: none;
-  background: transparent;
-}
-
-.modal-content {
-  padding: 24px;
-}
-
-@media screen and (min-width: 769px) {
-  .modal-content {
-    background: #282828;
-    color: #fff;
-    border-radius: inherit;
-  }
-}
 .modalheader {
   font-family: Guardian Sans XCond;
   font-size: 24px;
@@ -41,18 +14,6 @@
   line-height: 34px;
   letter-spacing: 0.02em;
   text-align: left;
-}
-
-.chasisheader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.chasisclosebtn {
-  background: #282828;
-  border: none;
-  scale: 2.4;
 }
 
 .modal-title .modalheader {
@@ -92,16 +53,6 @@ button.close {
   margin: 20px 0 30px;
 }
 
-.break span {
-  background: #282828;
-  padding: 0 10px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-#ext-login-btns {
-  display: flex;
-}
-
 input#inputPhone {
   background: linear-gradient(0deg, #373737, #373737);
   border: 1px solid #616161;
@@ -132,13 +83,6 @@ input#inputPhone {
   color: #fff;
   text-decoration: none;
   opacity: 0.75;
-}
-
-.modal-body label {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 500;
-  color: #ededed;
 }
 
 .phoneHelp {
@@ -179,26 +123,31 @@ input#inputPhone {
   margin-bottom: 10px;
 }
 
-.login-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  width: 219.5px;
-  padding: 8px 10px;
-  background: #282828;
-  border: 1px solid #616161;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-weight: 600;
-  color: #ededed;
+.closebtn {
+  background: none;
+  background: transparent;
 }
 
-#ext-login-btns {
-  display: flex;
-  justify-content: space-between;
+/* Add this CSS to your Auth.css file or in your styling solution */
+@media screen and (min-width: 769px) {
+  .modal-content {
+    background: #282828;
+    color: #fff;
+    border-radius: inherit;
+    margin-top: 130px;
+    padding: 24px;
+  }
 }
-
-.login-btns img {
-  margin: 0 5px;
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+    height: 150vh;
+    color: var(--text-neutral-strong, #ededed);
+    border-radius: 16px 16px 0px 0px;
+    box-shadow: 0px -4px 40px 0px rgba(218, 41, 28, 0.04);
+    border-radius: inherit;
+    margin-top: 80px;
+    padding: 15px;
+    background: linear-gradient(172deg, rgba(0, 0, 0, 0.69) 6.45%, rgba(0, 0, 0, 0.88) 52.72%), url(../assets/Images/Background.png), lightgray -806.861px -14px/323.213% 147.017% no-repeat;
+  }
 }/*# sourceMappingURL=Auth.css.map */

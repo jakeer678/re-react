@@ -49,10 +49,10 @@ const VerifyNumber = () => {
                 <button
                   id="sendOtp"
                   type="submit"
-                  className="btn btn-block disableOtp"
+                  className="verifybtn"
                   onClick={verifyNumber}
                 >
-                  SEND OTP
+                  VERIFY
                 </button>
                 <small className="form-text text-muted phoneHelp">
                   By continuing, you agree to our
