@@ -17,7 +17,6 @@
   width: 100%;
 }
 
-
 .modalheader {
   font-family: Guardian Sans XCond;
   font-size: 24px;
@@ -152,14 +151,11 @@ input#inputPhone {
   font-weight: 600;
   color: #ededed;
 }
-#ext-login-btns {
-  display: flex;
-  justify-content: space-between;
-}
+
 .login-btns img {
   margin: 0 5px;
 }
-.verifybtn {
+.verifybtns {
   border: 1px solid var(--primary-red-500, #da291c) !important;
   background: var(--primary-red-800, #57100b) !important;
   padding: 6px 6px;
@@ -186,7 +182,16 @@ $BaseBG: #0f0f1a;
 #timeElmWrapper {
   color: #ededed;
 }
+.otp-input {
+  text-align: center;
+  font-size: 1.5rem;
+  height: 50px;
+  margin: 4px;
+}
 
+.regd-motor-header {
+  display: flex;
+}
 @media screen and (min-width: 769px) {
   .digit-group {
     input {
@@ -225,6 +230,9 @@ $BaseBG: #0f0f1a;
     justify-content: space-between;
     align-items: center;
   }
+  .vertical-line-mark img {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   .otyverify-header {
@@ -232,27 +240,12 @@ $BaseBG: #0f0f1a;
     justify-content: space-between;
     align-items: center;
   }
-}
-
-.regd-motor-header {
-  display: flex;
-}
-
-.otp-input {
-  text-align: center;
-  font-size: 1.5rem;
-  height: 50px;
-  margin: 4px;
-}
-
-@media (max-width: 576px) {
   .otp-input {
     width: 100%;
     margin: 4px 0;
   }
 }
-@media screen and (min-width: 576px) {
-  .vertical-line-mark img {
-    display: none;
-  }
-}
+
+
+
+

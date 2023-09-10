@@ -17,7 +17,6 @@
   width: 100%;
 }
 
-
 .modalheader {
   font-family: Guardian Sans XCond;
   font-size: 24px;
@@ -99,9 +98,9 @@ input#inputPhone {
 .modal-body {
   label {
     font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
     color: #ededed;
+    margin-left: 2px;
   }
 }
 .phoneHelp {
@@ -118,15 +117,14 @@ input#inputPhone {
   padding: 6px 6px;
   margin-top: 38px;
   height: 48px;
-  border: 2px solid var(--neutral-graphite-700, #373737);
-  background: var(--neutral-graphite-600, #474747);
   font-family: Montserrat;
   font-size: 14px;
-  font-weight: 700;
-  color: var(--text-neutral-strong, #ededed);
+  font-weight: 600;
   text-transform: uppercase;
   width: 100%;
   border-radius: inherit;
+  color: var(--neutral-graphite-800, #282828);
+  text-align: center;
 }
 .redirect-links {
   color: #da291c;
@@ -152,10 +150,6 @@ input#inputPhone {
   font-weight: 600;
   color: #ededed;
 }
-#ext-login-btns {
-  display: flex;
-  justify-content: space-between;
-}
 .login-btns img {
   margin: 0 5px;
 }
@@ -163,15 +157,34 @@ input#inputPhone {
 $BaseBG: #0f0f1a;
 
 .resendOtp {
+  margin-right: 3px;
   font-family: Montserrat;
   font-size: 12px;
   color: var(--primary-red-500, #da291c) !important;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 13px;
   text-align: end;
 }
 #timeElmWrapper {
   color: #ededed;
+}
+.regd-motor-header {
+  display: flex;
+}
+
+.otp-input {
+  text-align: center;
+  font-size: 1.5rem;
+  height: 50px;
+  margin: 4px;
+}
+.chasisheader h3 {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Guardian Sans XCond;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 33.6px */
+  letter-spacing: 0.56px;
 }
 
 @media screen and (min-width: 769px) {
@@ -188,54 +201,42 @@ $BaseBG: #0f0f1a;
       border-radius: inherit;
     }
   }
+  .otyverify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 767px) {
   .digit-group input {
     width: 19px;
-    height: 38px;
     background: linear-gradient(0deg, #373737, #373737);
-    border: 1px solid #616161;
     display: flex;
     align-items: center;
-
     border-radius: inherit;
-    padding-left: 35px;
-    padding-right: 1px;
-    width: 100%;
+    padding-left: 39px;
+    padding-right: 0px;
   }
-}
-
-//otpverify component
-@media screen and (min-width: 769px) {
   .otyverify-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-}
-@media screen and (max-width: 767px) {
-  .otyverify-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.regd-motor-header {
-  display: flex;
-}
-
-.otp-input {
-  text-align: center;
-  font-size: 1.5rem;
-  height: 50px;
-  margin: 4px;
-}
-
-@media (max-width: 576px) {
   .otp-input {
     width: 100%;
     margin: 4px 0;
   }
 }
 
+@media (max-width: 768px) {
+  .otp-input {
+    color: white;
+  }
+}
+
+/* White text color for desktop screens */
+@media (min-width: 769px) {
+  .otp-input {
+    color: white;
+  }
+}

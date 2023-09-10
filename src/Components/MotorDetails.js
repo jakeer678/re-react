@@ -16,9 +16,9 @@ const MotorDetails = () => {
       <section>
         <Modal show={show} animation={false} onHide={handleClose}>
           <div className="modal-header">
-            <h5 className="modal-title modalheader">
+            <h2 className="modal-title modalheader">
               Enter Motorcycle Details
-            </h5>
+            </h2>
             <span onClick={handleClose} className="closebtnchasis">
               &times;
             </span>
@@ -46,13 +46,12 @@ const MotorDetails = () => {
                   aria-describedby="Chassis"
                   placeholder="Enter Chassis Number"
                 />
-                <small className="redirect-links">
+                <span className="redirect-links">
                   Where to find Chasis Number?
-                </small>
+                </span>
               </div>
             </form>
             <button
-         
               type="submit"
               className="motorDeatailbtn"
               onClick={motorDetails}

@@ -56,10 +56,10 @@
   .navbar-expand-lg .navbar-nav .nav-link {
     color: var(--neutral-text, #ededed);
     font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
+    font-size: 12.5px;
+  }
+  .nav-icons {
+    margin-left: 40px;
   }
   .navbar .nav-header .logoimg {
     margin-left: 30px;
@@ -69,9 +69,6 @@
   }
   .menu-btn img {
     display: none;
-  }
-  .nav-icons {
-    margin-left: 80px;
   }
   .nav-icons img {
     margin-left: 30px;
@@ -119,15 +116,11 @@
     display: none;
   }
   .india-text {
-    color: #ededed;
     color: var(--text-neutral-strong, #ededed);
     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
     margin-left: 20px;
     margin-top: 8px;
-    scale: 1.1;
+    scale: 1;
   }
   .india-text-en {
     display: none;

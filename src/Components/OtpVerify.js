@@ -114,12 +114,7 @@ const OtpVerify = () => {
                 Resend OTP
               </div>
             )}
-            <button
-              id="verifyOtp"
-              type="submit"
-              className="verifybtn"
-              onClick={otpVerified}
-            >
+            <button type="submit" className="verifybtns" onClick={otpVerified}>
               Verify
             </button>
           </div>

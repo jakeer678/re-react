@@ -10,7 +10,7 @@ import arrowdown from "../assets/Images/keyboard_arrow_down.svg";
 import "../Styles/Header.css";
 const Header = () => {
   const logoStyle = {
-    fill: "red", // Change this to the desired color
+    fill: "red",
   };
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">

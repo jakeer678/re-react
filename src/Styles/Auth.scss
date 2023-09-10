@@ -82,23 +82,21 @@ input#inputPhone {
   font-weight: 600;
   color: #ededed !important;
 }
-#sendOtp,
-#verifyOtp,
-#confirm-signup,
-#confirm-vehicle,
-#confirm-pay {
+
+.authbtn {
+  border: 2px solid var(--neutral-graphite-700, #373737);
+  background: var(--neutral-graphite-600, #474747);
   padding: 6px 6px;
   margin-top: 38px;
   height: 48px;
-  border: 2px solid var(--neutral-graphite-700, #373737);
-  background: var(--neutral-graphite-600, #474747);
   font-family: Montserrat;
   font-size: 14px;
-  font-weight: 700;
-  color: var(--text-neutral-strong, #ededed);
+  font-weight: 600;
   text-transform: uppercase;
   width: 100%;
   border-radius: inherit;
+  color: var(--neutral-graphite-800, #282828);
+  text-align: center;
 }
 .redirect-links {
   color: #da291c;
@@ -116,32 +114,22 @@ input#inputPhone {
   background: transparent;
 }
 
-/* Add this CSS to your Auth.css file or in your styling solution */
-// .input-group {
-//   position: relative;
-// }
-
-// .form-control::after {
-//   content: "|"; /* Content of the vertical line */
-//   position: absolute;
-//   top: 0;
-//   right: 5px; /* Adjust the right distance as needed */
-//   bottom: 0;
-//   color: #888; /* Color of the vertical line */
-//   font-size: 18px; /* Adjust the font size as needed */
-//   pointer-events: none; /* Prevent interaction with the pseudo-element */
-// }
-
-// /* Remove border radius for the input field */
-// .form-control {
-//   border-radius: 0;
-// }
-
-// /* Adjust input field width as needed */
-// .form-control {
-//   padding-right: 25px; /* Ensure space for the vertical line */
-// }
-
+.modal-header h3 {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Guardian;
+}
+.phoneHelpcont {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Montserrat;
+}
+.modal-body-auth label {
+  font-family: Montserrat;
+  color: var(--text-neutral-strong, #ededed);
+}
+.phoneHelpauth {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Montserrat !important;
+}
 @media screen and (min-width: 769px) {
   .modal-content {
     background: #282828;
@@ -150,6 +138,28 @@ input#inputPhone {
     margin-top: 130px;
     padding: 24px;
   }
+  .modal-header h3 {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0.56px;
+  }
+  .phoneHelpcont {
+    color: var(--text-neutral-strong, #ededed);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 140%;
+    margin-top: 7px;
+  }
+  .modal-body-auth label {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .phoneHelpauth {
+    margin-top: 4px;
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 768px) {
   .modal-content {
@@ -157,11 +167,40 @@ input#inputPhone {
     height: 150vh;
     color: var(--text-neutral-strong, #ededed);
     border-radius: 16px 16px 0px 0px;
-    // background: var(--background-strong-neutral-900, #000);
+    background: var(--background-strong-neutral-900, #000);
     box-shadow: 0px -4px 40px 0px rgba(218, 41, 28, 0.04);
     border-radius: inherit;
     margin-top: 80px;
     padding: 15px;
-    background: linear-gradient(172deg, rgba(0, 0, 0, 0.69) 6.45%, rgba(0, 0, 0, 0.88) 52.72%), url(../assets/Images/Background.png), lightgray -806.861px -14px / 323.213% 147.017% no-repeat;
+    background: linear-gradient(
+        172deg,
+        rgba(0, 0, 0, 0.74) 6.45%,
+        rgba(0, 0, 0, 6) 52.72%
+      ),
+      url(../assets/Images/Background.png),
+      lightgray -806.861px -14px / 323.213% 147.017% no-repeat;
+  }
+  .modal-body-auth label {
+    font-family: Montserrat !important;
+    font-size: 11px !important;
+    margin-bottom: 6px;
+    color: var(--text-neutral-strong, #ededed);
+  }
+  .phoneHelpauth {
+    font-size: 11px !important;
+  }
+  .modal-header h3 {
+    font-size: 28px;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0.56px;
+  }
+  .phoneHelpcont {
+    font-size: 12px;
+    font-style: normal;
+    line-height: 140%;
+    margin-top: 5px;
   }
 }
+
+

@@ -1,10 +1,17 @@
-import React, { useContext, useState, useRef, useEffect, Fragment } from "react";
+import React, {
+  useContext,
+  useState,
+  useRef,
+  useEffect,
+  Fragment,
+} from "react";
 import chevron from "../assets/Images/chevron_left.svg";
 import chasis from "../assets/Images/view-chessis.svg";
 import { useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import { contextStore } from "../context/Contextstore";
 import "../Styles/EnterOtp.css";
+
 const EnterOtp = () => {
   const { show, handleShow, handleClose } = useContext(contextStore);
 
@@ -16,32 +23,26 @@ const EnterOtp = () => {
   const [resendTimer, setResendTimer] = useState(0);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
 
-  // Create refs for each input field
   const inputRefs = Array(6)
     .fill()
     .map((_, index) => useRef(null));
 
   const handleInput = (event, index) => {
-    // Start the timer when clicking on an input field
     if (!isTimerRunning) {
       setResendTimer(30);
       setIsTimerRunning(true);
     }
 
-    // Check if the input is a number
     if (/^[0-9]$/.test(event.target.value)) {
-      // Move to the next input field if available
       if (index < 5 && event.target.value !== "") {
         inputRefs[index + 1].current.focus();
       }
     } else {
-      // Clear the input if it's not a number
       event.target.value = "";
     }
   };
 
   const handleBackspace = (event, index) => {
-    // Move to the previous input field if available
     if (index > 0 && event.key === "Backspace" && event.target.value === "") {
       inputRefs[index - 1].current.focus();
     }
@@ -60,12 +61,6 @@ const EnterOtp = () => {
     };
   }, [resendTimer, isTimerRunning]);
 
-  const handleResendOtp = () => {
-    // Add logic here to resend OTP
-    setResendTimer(30); // Reset the timer to 30 seconds
-    setIsTimerRunning(true);
-  };
-
   return (
     <Fragment>
       <section>
@@ -73,7 +68,7 @@ const EnterOtp = () => {
           <div className="modal-header">
             <div className="chasisheader">
               <img src={chevron} alt="back-btn" className="back-btn" />
-              <h5 className="modal-title modalheader">OTP Verification</h5>
+              <h3 className="modal-title modalheader">OTP Verification</h3>
             </div>
 
             <span onClick={handleClose} className="closebtnchasis">
@@ -93,6 +88,10 @@ const EnterOtp = () => {
                       ref={ref}
                       onChange={(e) => handleInput(e, index)}
                       onKeyDown={(e) => handleBackspace(e, index)}
+                      inputMode="numeric"
+                      autoComplete="off"
+                      autoCorrect="off"
+                      autoCapitalize="none"
                     />
                   </div>
                 ))}
@@ -108,7 +107,10 @@ const EnterOtp = () => {
                 id="resendOtp"
                 type="button"
                 className="form-text text-muted resendOtp"
-                onClick={handleResendOtp}
+                onClick={() => {
+                  setResendTimer(30);
+                  setIsTimerRunning(true);
+                }}
               >
                 Resend OTP
               </div>
@@ -116,7 +118,7 @@ const EnterOtp = () => {
             <button
               id="verifyOtp"
               type="submit"
-              className="btn btn-block disableOtp "
+              className="btn btn-block disableOtp"
               onClick={otpVerified}
             >
               Verify

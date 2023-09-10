@@ -1,8 +1,32 @@
-$white: #FFF;
-$yellow: #ffc800;
-$grey: #ADADAD;
-$light_grey:#D9D9D9;
-$BaseBG: #0f0f1a;
-$head-font:'gilroyblack';
-$head-sub-font:'gilroyregular';
-$body-font:'tt_commonsregular';
+//FONTS
+
+// @font-face {
+//   font-family: "tt_commonsregular";
+//   src: url("../assets/fonts/tt_commons_regular-webfont.woff2") format("woff2"),
+//     url("../assets/fonts/tt_commons_regular-webfont.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+@font-face {
+  font-family: "Guardian";
+  src: url("../assets/fonts/guardiansanssemibold-webfont.woff") format("woff2"),
+    url("../assets/fonts/guardiansanssemibold-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Guardian Sans XCond";
+  src: url("../assets/fonts/guardiansanssemibold-webfont.woff") format("woff2"),
+    url("../assets/fonts/guardiansanssemibold-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-regular.ttf") format("woff2"),
+    url("../assets/fonts/montserrat-regular.svg") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,16 +1,13 @@
-@import '../src/assets/fonts/tt_commonsregular.woff';
-
+@import "../src/Variables/variable.css";
 
 body {
   margin: 0;
-  font-family: 'tt_commonsregular', Fallback, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 

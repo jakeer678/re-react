@@ -5,8 +5,19 @@
   transform-origin: right;
   margin-left: 117px;
   stroke-width: 2px;
-  stroke: rgba(223, 59, 59, 0.30);
+  stroke: rgba(223, 59, 59, 0.3);
 }
+
+.chasisheader h4 {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Guardian Sans XCond;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.56px;
+}
+
 .modalheader {
   font-family: Guardian Sans XCond;
   font-size: 24px;
@@ -20,21 +31,14 @@
   justify-content: center;
   align-items: center;
 }
+.chasisheader h4 {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Guardian Sans XCond;
+}
 .chasisclosebtn {
   background: #282828;
   border: none;
   scale: 2.4;
-}
-
-.modal-title .modalheader {
-  margin-bottom: 0;
-  line-height: var(--bs-modal-title-line-height);
-  font-family: Guardian Sans XCond;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 0.56px;
 }
 
 .closebtnchasis {
@@ -60,9 +64,6 @@ button.close {
   margin: 20px 0 30px;
 }
 
-#ext-login-btns {
-  display: flex;
-}
 input#inputPhone {
   background: linear-gradient(0deg, #373737, #373737);
   border: 1px solid #616161;
@@ -112,321 +113,7 @@ input#inputPhone {
   font-weight: 600;
   margin-bottom: 10px;
 }
-.login-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  width: 219.5px;
-  padding: 8px 10px;
-  background: #282828;
-  border: 1px solid #616161;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-weight: 600;
-  color: #ededed;
-}
-#ext-login-btns {
-  display: flex;
-  justify-content: space-between;
-}
-.login-btns img {
-  margin: 0 5px;
-}
-/*forms [END]*/
 
-//otp verification [START]
-
-$BaseBG: #0f0f1a;
-
-
-#timeElmWrapper {
-  color: #ededed;
-}
-
-// Pc details [START]
-
-span.tnC {
-  display: flex;
-}
-#argeeHelp {
-  margin: 0.5rem 0;
-}
-.tnC-checkbox {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-.tnC-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.tnC-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 24px;
-  width: 24px;
-  background-color: #373737;
-  border: 1px solid #ededed;
-}
-
-/* On mouse-over, add a background color */
-.tnC-checkbox:hover input ~ .tnC-checkmark {
-}
-
-/* When the checkbox is checked, add a blue background */
-.tnC-checkbox input:checked ~ .tnC-checkmark {
-  background: #fd5050;
-  border: none;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.tnC-checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.tnC-checkbox input:checked ~ .tnC-checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.tnC-checkbox .tnC-checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.argeeHelp {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 17px;
-}
-input#f-name,
-#last-name,
-#pc-details-email {
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.activeBtn {
-  background: rgb(87, 16, 11);
-  color: rgb(237, 237, 237);
-  border: 1px solid rgb(218, 41, 28);
-}
-.inActiveBtn {
-  background: linear-gradient(0deg, rgb(71, 71, 71), rgb(71, 71, 71)),
-    linear-gradient(0deg, rgb(55, 55, 55), rgb(55, 55, 55));
-  color: rgb(40, 40, 40);
-  border: 2px solid rgb(55, 55, 55);
-}
-.modal-body {
-  .toaster {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    background: #5f583e;
-    margin: 2rem 0 3rem;
-    padding: 10px;
-    display: flex;
-    align-items: baseline;
-  }
-  .reg-fail-toast {
-    margin-left: 0.5rem;
-  }
-  .selected-vehicle {
-    width: 90%;
-    margin: 2rem auto 0rem;
-    text-align: right;
-  }
-  .cruiser-text-bg {
-    width: 100%;
-  }
-  .selected-cruiser {
-    margin-top: -6rem;
-    width: 95%;
-    box-shadow: 0px 177px 118px -81px rgb(145 142 142 / 24%);
-  }
-  .key-details-cards {
-    background: linear-gradient(
-      180deg,
-      rgba(24, 24, 24, 0) 0%,
-      rgba(24, 24, 24, 0.32) 86.32%
-    );
-    border: 0.5px solid #373737;
-    width: 48%;
-    padding: 1rem;
-  }
-  #key-motor-details {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
-  .motor-details-title {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 400;
-    color: #a7a7a7;
-    line-height: 17px;
-    padding: 0.4rem 0;
-  }
-  p.motor-details-desc {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-  }
-  .motor-details-wrap > p {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-  }
-}
-
-// Product summary [START]
-.modal-content {
-  .product-summary-header,
-  .motorcycle-linked-details-header,
-  #motorcycle-details-b1,
-  #motorcycle-details-b2 {
-    border-bottom: 0.5px solid #ffffff66;
-  }
-  .modal-body {
-    #prod-summary-b1,
-    #prod-summary-b2 {
-      border-bottom: 0.5px solid rgba(255, 255, 255, 0.4);
-    }
-    #whatsApp-confirmation,
-    #re-confirmation {
-      accent-color: white;
-    }
-    .prod-plan-title {
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 22px;
-      color: #a7a7a7;
-      padding: 0.3rem 0;
-    }
-    .prod-plan-desc {
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 22px;
-    }
-    #prod-summary-b1,
-    #prod-summary-b2 {
-      padding: 1rem 0;
-    }
-    #prod-summary-b3 {
-      padding: 1.5rem 0;
-    }
-    .prod-summary-cb-label {
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 400;
-      color: #ededed;
-    }
-    .WhatsApp-redirect {
-      color: #78bb64;
-    }
-  }
-}
-
-// Motorcycle linked details [START]
-div#motorcycle-details-b1,
-#motorcycle-details-b2,
-#motorcycle-details-b3 {
-  padding: 1rem 0;
-}
-.linked-phone,
-.linked-phone-num {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-}
-.change-num {
-  color: #fd5050;
-}
-.sel-prod-plan {
-  align-items: center;
-  display: flex;
-}
-.motorcycle-details-toaster {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  background: #5f583e;
-  margin: 1rem 0;
-  padding: 10px;
-  display: flex;
-}
-.motorcycle-details-toaster > img {
-  height: 1.2rem;
-  align-self: center;
-}
-
-
-
-/* Position the image container and set a higher z-index so it appears below other elements */
-.image-container {
-  position: relative;
-  z-index: 1;
-}
-
-
-.motor-details {
-  margin: 1rem 0;
-}
-.invoice-mail {
-  background: #373737;
-  padding: 1rem;
-}
-
-
-
-
-#tnc-submit,
-.regd-motorcycle-submit {
-  color: #ededed;
-  text-transform: none;
-  font-size: 16px;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-  padding: 6px 12px 6px 12px;
-  margin-top: 1rem;
-  height: 56px;
-  border: 1px solid var(--primary-red-500, #da291c);
-  background: var(--primary-red-800, #57100b);
-  border-radius: 0;
-}
 .regd-motorcycles {
   display: flex;
   justify-content: space-between;
@@ -434,23 +121,6 @@ div#motorcycle-details-b1,
   background: #373737;
   height: 96px;
   margin-bottom: 1.5rem;
-}
-
-/* Hide the default radio buttons */
-.regd-motorcycles input[type="radio"] {
-  display: none;
-}
-
-/* Show a custom indicator when the radio button is checked */
-.regd-motorcycles input[type="radio"] + label {
-  position: relative;
-  padding-left: 2rem;
-  cursor: pointer;
-  margin: 1rem 0;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
 }
 
 .regd-motorcycles input[type="radio"] + label::before {
@@ -464,7 +134,6 @@ div#motorcycle-details-b1,
   border-radius: 50%;
 }
 
-/* Inner circle for checked indicator */
 .regd-motorcycles input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
@@ -483,52 +152,13 @@ div#motorcycle-details-b1,
   font-size: 32px;
   line-height: 38px;
 }
-.regd-title {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #a7a7a7;
-  margin: 10px 0;
-}
+
 .motor-num {
   color: #a7a7a7;
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-}
-// RSA PLAN [START]
-.rsa-wrapper {
-  text-align: center;
-}
-#rsa-submit {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 600;
-  width: 346px;
-  padding: 8px 16px 8px 16px;
-  height: 48px;
-  margin-top: 2rem;
-  align-self: center;
-  background: rgb(87, 16, 11);
-  color: rgb(237, 237, 237);
-  border: 1px solid rgb(218, 41, 28);
-}
-.redirect-rsa {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  color: #cacaca;
-  transform: translateY(-42px);
-  width: 50%;
-  margin: 0 auto;
-}
-.rsa-modal-title,
-.view-chassis-header-title {
-  font-size: 25px !important;
-  line-height: 48px !important;
 }
 
 // view chessis number [START]
@@ -539,24 +169,13 @@ div#motorcycle-details-b1,
   width: 100%;
   margin-top: 3rem;
 }
-.chessis-body-title {
-  font-family: Montserrat;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  color: #ededed;
-}
+
 .view-chessis-img {
   width: 100%;
   margin: 3rem 0;
 }
 .sub-body-title {
   font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #a7a7a7;
-  letter-spacing: 0.5px;
 }
 .chesis-view-zoomed {
   background: #df3b3b33;
@@ -568,66 +187,6 @@ div#motorcycle-details-b1,
   position: absolute;
   top: 23%;
   left: 35%;
-}
-// EDIT DETAILS [START]
-.edit-modal-title {
-  font-size: 40px !important;
-  line-height: 48px !important;
-}
-.edit-details {
-  background: linear-gradient(0deg, #373737, #373737);
-  border: 1px solid #616161;
-  color: #fff !important;
-  height: 48px;
-  border-radius: 0;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 600;
-}
-.edit-details-wrapper {
-  justify-content: space-between;
-  /* width: 100%; */
-}
-.edit-details-lhs {
-  width: 48%;
-}
-.edit-details-rhs {
-  width: 48%;
-}
-form#edit-myForm {
-  display: flex;
-  justify-content: space-between;
-}
-#edit-myForm input {
-  width: 48px;
-  height: 48px;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
-}
-.edit-details-wrapper label {
-  margin-top: 1.5rem;
-}
-button#edit-details-submit {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 600;
-  width: 48%;
-  padding: 8px 16px 8px 16px;
-  height: 48px;
-  margin-top: 2rem;
-  border-radius: 0;
-  background: rgb(87, 16, 11);
-  color: rgb(237, 237, 237);
-  border: 1px solid rgb(218, 41, 28);
-}
-.otp-cite {
-  font-family: Montserrat;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 17px;
-  margin-top: 1rem;
-  color: #a7a7a7;
 }
 
 // RC Verification [START]
@@ -654,58 +213,6 @@ button#edit-details-submit {
   margin-top: 25rem;
 }
 
-// Change Request Received [START]
-.success-title {
-  font-family: Guardian Sans XCond;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: 0.02em;
-  margin-top: -2rem;
-}
-.success-desc {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #cacaca;
-  padding: 1rem 2rem;
-  letter-spacing: 0.2px;
-}
-.req-success {
-  display: block;
-  text-align: center;
-}
-.success-footer {
-  background: #373737;
-  display: flex;
-  justify-content: space-between;
-  height: 48px;
-  align-items: center;
-  padding: 0 1.5rem;
-}
-.success-redirect {
-  color: #fd5050;
-  margin-top: -1rem;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
-}
-p.success-footer-title {
-  color: #cacaca;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 17px;
-}
-p.success-footer-title > span {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-left: 0.2rem;
-}
-
 .closebtn {
   background: #282828;
   border: none;
@@ -713,22 +220,6 @@ p.success-footer-title > span {
 }
 .closebtn:hover {
   background: transparent;
-}
-.btn-secondary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #6c757d;
-  --bs-btn-border-color: #6c757d;
-  --bs-btn-hover-color: #fff;
-  /* --bs-btn-hover-bg: #5c636a; */
-  /* --bs-btn-hover-border-color: #565e64; */
-  --bs-btn-focus-shadow-rgb: 130, 138, 145;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #565e64;
-  --bs-btn-active-border-color: #51585e;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #6c757d;
-  --bs-btn-disabled-border-color: #6c757d;
 }
 
 .closebtnsmotors {
@@ -743,83 +234,36 @@ p.success-footer-title > span {
 .btn-primary {
   margin-top: 24px;
 }
-
+.chessis-body-title {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Montserrat;
+}
 @media screen and (min-width: 769px) {
-  .digit-group {
-    input {
-      width: 70px;
-      height: 48px;
-      text-align: center;
-      color: white;
-      background: linear-gradient(0deg, #373737, #373737);
-      padding: 16px;
-      border: 1px solid #616161;
-      margin: 2.5px;
-      border-radius: inherit;
-    }
-  }
-}
-@media screen and (max-width: 767px) {
-  .digit-group input {
-    width: 19px;
-    height: 38px;
-    background: linear-gradient(0deg, #373737, #373737);
-    border: 1px solid #616161;
-    display: flex;
-    align-items: center;
-
-    border-radius: inherit;
-    padding-left: 35px;
-    padding-right: 1px;
-    width: 100%;
-  }
-}
-
-//otpverify component
-@media screen and (min-width: 769px) {
-  .otyverify-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 767px) {
-  .otyverify-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .closebtn {
-    // margin-left: 73px;
-  }
-}
-
-.regd-motor-header {
-  display: flex;
-}
-
-.otp-input {
-  text-align: center;
-  font-size: 1.5rem;
-  height: 50px;
-  margin: 4px;
-}
-
-@media (max-width: 576px) {
-  .otp-input {
-    width: 100%;
-    margin: 4px 0;
-  }
-}
-@media screen and (min-width: 576px) {
   .vertical-line-mark img {
     display: none;
   }
+  .chasisheader h4 {
+    font-size: 26px;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0.56px;
+  }
+  .chessis-body-title {
+    font-size: 16px;
+    font-style: normal;
+    line-height: 140%;
+  }
+  .sub-body-title {
+    font-size: 12.5px;
+    line-height: 20px;
+    color: #a7a7a7;
+    letter-spacing: 0.5px;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .chessis-body-title {
-    font-size: 17px !important;
+    font-size: 13px;
   }
   .closebtnchasis {
     scale: 2.2 !important;
@@ -833,11 +277,9 @@ p.success-footer-title > span {
   }
   .vertcalLine {
     position: relative;
-    width: 10px; /* Adjust the width of your vertical line as needed */
-    height: 40%; /* Vertical line extends from top to bottom */
-    /* Color of the vertical line */
+    width: 10px;
+    height: 40%;
     bottom: 25%;
-
     left: 28%;
     stroke-width: 1px;
   }
@@ -857,7 +299,7 @@ p.success-footer-title > span {
     bottom: 60%;
     left: -25%;
     width: 5px;
-}
+  }
   .veritcalarrow-bottom {
     border-bottom: 1.5px solid rgb(233, 2, 34);
     width: 200px;
@@ -865,13 +307,24 @@ p.success-footer-title > span {
     stroke-width: 2px;
     stroke: rgba(223, 59, 59, 0.3);
     margin-left: -99px;
-    margin-top: 84px
-   
+    margin-top: 84px;
   }
   .vertical-line-mark img {
     scale: 7;
   }
   .veritcalarrow {
     display: none;
+  }
+  .chasisheader h4 {
+    font-size: 20px;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0.56px;
+  }
+  .sub-body-title {
+    font-size: 11.5px;
+    line-height: 20px;
+    color: #a7a7a7;
+    letter-spacing: 0.5px;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import google from "../assets/Images/Google.svg";
 import facebook from "../assets/Images/Facebook.svg";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -7,29 +7,30 @@ import Modal from "react-bootstrap/Modal";
 import { contextStore } from "../context/Contextstore";
 
 const Auth = () => {
-  const [inputNumber, setInputValue] = useState("+91"); // Add "|" after "+91"
+  const [inputNumber, setInputValue] = useState("+91");
   const { show, handleShow, handleClose } = useContext(contextStore);
   const redirect = useNavigate();
   const sendOtpAuth = () => {
-    
     redirect("/verifyNumber");
   };
+
   const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+    const inputText = event.target.value.replace(/[^0-9+]/g, "");
+    setInputValue(inputText);
   };
 
   return (
-    <>
+    <Fragment>
       <section>
         <div>
           <Modal show={show} animation={false} onHide={handleClose}>
             <div className="modal-header">
-              <h5 className="modal-title modalheader">Login or Signup</h5>
+              <h3 className="modal-title modalheader">Login or Signup</h3>
               <span onClick={handleClose} className="closebtnchasis">
                 &times;
               </span>
             </div>
-            <div className="modal-body">
+            <div className="modal-body-auth">
               <form>
                 <label htmlFor="inputPhone">Please enter your phone no.</label>
                 <div className="input-group">
@@ -41,35 +42,29 @@ const Auth = () => {
                     maxLength="14"
                     value={inputNumber}
                     onChange={handleInputChange}
+                    inputMode="tel"
+                    pattern="[0-9]*"
                   />
-                  {/* <div className="input-group-append">
-                    <span className="input-group-text">|</span>
-                  </div> */}
                 </div>
-                <small className="form-text text-muted phoneHelp">
+                <span className="phoneHelpauth">
                   6-digit OTP will be sent to this phone number
-                </small>
+                </span>
 
-                <button
-                  id="sendOtp"
-                  type="submit"
-                  className="btn btn-block disableOtp"
-                  onClick={sendOtpAuth}
-                >
+                <button type="submit" className="authbtn" onClick={sendOtpAuth}>
                   SEND OTP
                 </button>
-                <small className="form-text text-muted phoneHelp">
+                <p className="phoneHelpcont">
                   By continuing, you agree to our
                   <span className="redirect-links">Terms and Conditions</span>
                   and
                   <span className="redirect-links">Privacy Policy</span>
-                </small>
+                </p>
               </form>
             </div>
           </Modal>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

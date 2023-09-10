@@ -7,7 +7,8 @@
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 700;
-  color: var(--text-neutral-strong, #ededed);
+  color: var(--neutral-graphite-800, #282828);
+  text-align: center;
   text-transform: uppercase;
   width: 100%;
   border-radius: inherit;
@@ -16,11 +17,17 @@
   border: none;
   padding: 0 0 1rem;
 }
-
+.modal-header h2 {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Guardian Sans XCond;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.56px;
+}
 .modalheader {
   font-family: Guardian Sans XCond;
-  font-size: 24px;
-  font-weight: 600;
   line-height: 34px;
   letter-spacing: 0.02em;
   text-align: left;
@@ -51,11 +58,49 @@
   height: 48px;
   border-radius: 0;
 }
+
+.modal-body .vehicle-details-form label {
+  color: var(--neutral-graphite-50, #ededed);
+  font-family: Montserrat;
+  line-height: 140%; /* 19.6px */
+}
+
+.vehicle-details-form .redirect-links {
+  color: var(--primary-text, #fd5050);
+  font-family: Montserrat;
+}
+
+@media screen and (min-width: 769px) {
+  .modal-body .vehicle-details-form label {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .vehicle-details-form .redirect-links {
+    font-size: 13px;
+  }
+  .modal-header h2 {
+    font-size: 24px !important;
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   .modal-title {
     font-size: 20px !important;
   }
   .motorDeatailbtn {
     margin-top: 120px;
+  }
+  .modal-header h2 {
+    font-size: 19px !important;
+  }
+  .modal-body .vehicle-details-form label {
+    font-size: 11.75px;
+    margin-bottom: 6px;
+  }
+  .vehicle-details-form .redirect-links {
+    font-size: 11px;
+    font-style: normal;
+    line-height: 140%;
   }
 }

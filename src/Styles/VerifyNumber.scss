@@ -41,7 +41,7 @@
   line-height: 120%;
   letter-spacing: 0.56px;
 }
- .verifybtn {
+.verifybtn {
   border: 1px solid var(--primary-red-500, #da291c) !important;
   background: var(--primary-red-800, #57100b) !important;
   padding: 6px 6px;
@@ -78,9 +78,6 @@ button.close {
   margin: 20px 0 30px;
 }
 
-#ext-login-btns {
-  display: flex;
-}
 input#inputPhone {
   background: linear-gradient(0deg, #373737, #373737);
   border: 1px solid #616161;
@@ -106,14 +103,7 @@ input#inputPhone {
   text-decoration: none;
   opacity: 0.75;
 }
-.modal-body {
-  label {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 500;
-    color: #ededed;
-  }
-}
+
 .phoneHelp {
   font-family: Montserrat;
   font-size: 12px;
@@ -162,297 +152,71 @@ input#inputPhone {
   font-weight: 600;
   color: #ededed;
 }
-#ext-login-btns {
-  display: flex;
-  justify-content: space-between;
-}
+
 .login-btns img {
   margin: 0 5px;
 }
-
-.resendOtp {
+.modal-header h3 {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Guardian;
+}
+.phoneHelpcont {
+  color: var(--text-neutral-strong, #ededed);
   font-family: Montserrat;
-  font-size: 12px;
-  color: var(--primary-red-500, #da291c) !important;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: end;
 }
-#timeElmWrapper {
-  color: #ededed;
-}
-
-span.tnC {
-  display: flex;
-}
-#argeeHelp {
-  margin: 0.5rem 0;
-}
-.tnC-checkbox {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-.tnC-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.tnC-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 24px;
-  width: 24px;
-  background-color: #373737;
-  border: 1px solid #ededed;
-}
-
-/* When the checkbox is checked, add a blue background */
-.tnC-checkbox input:checked ~ .tnC-checkmark {
-  background: #fd5050;
-  border: none;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.tnC-checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.tnC-checkbox input:checked ~ .tnC-checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.tnC-checkbox .tnC-checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.argeeHelp {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 17px;
-}
-input#f-name,
-#last-name,
-#pc-details-email {
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.activeBtn {
-  background: rgb(87, 16, 11);
-  color: rgb(237, 237, 237);
-  border: 1px solid rgb(218, 41, 28);
-}
-.inActiveBtn {
-  background: linear-gradient(0deg, rgb(71, 71, 71), rgb(71, 71, 71)),
-    linear-gradient(0deg, rgb(55, 55, 55), rgb(55, 55, 55));
-  color: rgb(40, 40, 40);
-  border: 2px solid rgb(55, 55, 55);
-}
-.modal-body {
-  .toaster {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    background: #5f583e;
-    margin: 2rem 0 3rem;
-    padding: 10px;
-    display: flex;
-    align-items: baseline;
-  }
-  .reg-fail-toast {
-    margin-left: 0.5rem;
-  }
-  .selected-vehicle {
-    width: 90%;
-    margin: 2rem auto 0rem;
-    text-align: right;
-  }
-  .cruiser-text-bg {
-    width: 100%;
-  }
-  .selected-cruiser {
-    margin-top: -6rem;
-    width: 95%;
-    box-shadow: 0px 177px 118px -81px rgb(145 142 142 / 24%);
-  }
-  .key-details-cards {
-    background: linear-gradient(
-      180deg,
-      rgba(24, 24, 24, 0) 0%,
-      rgba(24, 24, 24, 0.32) 86.32%
-    );
-    border: 0.5px solid #373737;
-    width: 48%;
-    padding: 1rem;
-  }
-  #key-motor-details {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
-
-  p.motor-details-desc {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-  }
-  .motor-details-wrap > p {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-  }
-}
-
-// Product summary [START]
-.modal-content {
-  .product-summary-header,
-  .motorcycle-linked-details-header,
-  #motorcycle-details-b1,
-  #motorcycle-details-b2 {
-    border-bottom: 0.5px solid #ffffff66;
-  }
-  .modal-body {
-    #prod-summary-b1,
-    #prod-summary-b2 {
-      border-bottom: 0.5px solid rgba(255, 255, 255, 0.4);
-    }
-    #whatsApp-confirmation,
-    #re-confirmation {
-      accent-color: white;
-    }
-    .prod-plan-title {
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 22px;
-      color: #a7a7a7;
-      padding: 0.3rem 0;
-    }
-    .prod-plan-desc {
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 22px;
-    }
-    #prod-summary-b1,
-    #prod-summary-b2 {
-      padding: 1rem 0;
-    }
-    #prod-summary-b3 {
-      padding: 1.5rem 0;
-    }
-    .prod-summary-cb-label {
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 400;
-      color: #ededed;
-    }
-    .WhatsApp-redirect {
-      color: #78bb64;
-    }
-  }
-}
-
-// Motorcycle linked details [START]
-div#motorcycle-details-b1,
-#motorcycle-details-b2,
-#motorcycle-details-b3 {
-  padding: 1rem 0;
-}
-.linked-phone,
-.linked-phone-num {
+.modal-body-auth label {
   font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
+  color: var(--text-neutral-strong, #ededed);
 }
-.change-num {
-  color: #fd5050;
-}
-.sel-prod-plan {
-  align-items: center;
-  display: flex;
-}
-.motorcycle-details-toaster {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  background: #5f583e;
-  margin: 1rem 0;
-  padding: 10px;
-  display: flex;
-}
-.motorcycle-details-toaster > img {
-  height: 1.2rem;
-  align-self: center;
+.phoneHelpauth {
+  color: var(--text-neutral-strong, #ededed);
+  font-family: Montserrat !important;
 }
 
-/* Position the image container and set a higher z-index so it appears below other elements */
-.image-container {
-  position: relative;
-  z-index: 1;
+@media screen and (min-width: 769px) {
+  .modal-header h3 {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0.56px;
+  }
+  .phoneHelpcont {
+    color: var(--text-neutral-strong, #ededed);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 140%;
+    margin-top: 5px;
+  }
+  .modal-body-auth label {
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .phoneHelpauth {
+    margin-top: 2px;
+    font-size: 12px;
+  }
 }
-
-.motor-details {
-  margin: 1rem 0;
-}
-
-.invoice-mail {
-  background: #373737;
-  padding: 1rem;
-}
-
-.btn-secondary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #6c757d;
-  --bs-btn-border-color: #6c757d;
-  --bs-btn-hover-color: #fff;
-  /* --bs-btn-hover-bg: #5c636a; */
-  /* --bs-btn-hover-border-color: #565e64; */
-  --bs-btn-focus-shadow-rgb: 130, 138, 145;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #565e64;
-  --bs-btn-active-border-color: #51585e;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #6c757d;
-  --bs-btn-disabled-border-color: #6c757d;
-}
-
-#confirm-vehicle {
-  padding-left: 131px;
-  padding-right: 143px;
-}
-
-.btn-primary {
-  margin-top: 24px;
+@media screen and (max-width: 768px) {
+  .modal-body-auth label {
+    font-family: Montserrat !important;
+    font-size: 11px !important;
+    margin-bottom: 6px;
+    color: var(--text-neutral-strong, #ededed);
+  }
+  .phoneHelpauth {
+    font-size: 11px !important;
+  }
+  .modal-header h3 {
+    font-size: 28px;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0.56px;
+  }
+  .phoneHelpcont {
+    font-size: 12px;
+    font-style: normal;
+    line-height: 140%;
+    margin-top: 5px;
+  }
 }

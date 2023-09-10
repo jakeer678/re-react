@@ -40,7 +40,6 @@ const Banner = () => {
                 </button>
               </div>
             </div>
-
             <div className="banner-img">
               <img
                 className="arrow_right"

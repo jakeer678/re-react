@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import chevron from "../assets/Images/chevron_left.svg";
 import chasis from "../assets/Images/view-chessis.svg";
 import chasisnum from "../assets/Images/chasisnum.png";
@@ -12,13 +12,13 @@ const ChasisNumber = () => {
   const { show, handleShow, handleClose } = useContext(contextStore);
 
   return (
-    <>
+    <Fragment>
       <section>
         <Modal show={show} animation={false} onHide={handleClose}>
           <div className="modal-header">
             <div className="chasisheader">
               <img src={chevron} alt="back-btn" className="back-btn" />
-              <h5 className="modal-title modalheader">Chassis Number</h5>
+              <h4 className="modal-title modalheader">Chassis Number</h4>
             </div>
 
             <span onClick={handleClose} className="closebtnchasis">
@@ -54,7 +54,7 @@ const ChasisNumber = () => {
           <div className="view-chessis-img-chasis"></div>
         </Modal>
       </section>
-    </>
+    </Fragment>
   );
 };
 
