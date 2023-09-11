@@ -1,12 +1,21 @@
-import React, { useContext, useState, useRef, useEffect } from "react";
+
+import React, {
+  useContext,
+  useState,
+  useRef,
+  useEffect,
+  Fragment,
+} from "react";
 import chevron from "../assets/Images/chevron_left.svg";
 import chasis from "../assets/Images/view-chessis.svg";
 import { useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
-import "../Styles/Otpverify.css";
 import { contextStore } from "../context/Contextstore";
+import "../Styles/Otpverify.css";
 
 const OtpVerify = () => {
+  const [resendTimer, setResendTimer] = useState(0);
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
   const { show, handleShow, handleClose } = useContext(contextStore);
 
   const redirect = useNavigate();
@@ -14,35 +23,25 @@ const OtpVerify = () => {
     redirect("/registerMotor");
   };
 
-  const [resendTimer, setResendTimer] = useState(0);
-  const [isTimerRunning, setIsTimerRunning] = useState(false);
-
-  // Create refs for each input field
-  const inputRefs = Array(6)
-    .fill()
-    .map((_, index) => useRef(null));
+  // Define the array of refs directly within the component
+  const inputRefs = Array(6).fill().map(() => useRef(null));
 
   const handleInput = (event, index) => {
-    // Start the timer when clicking on an input field
     if (!isTimerRunning) {
       setResendTimer(30);
       setIsTimerRunning(true);
     }
 
-    // Check if the input is a number
     if (/^[0-9]$/.test(event.target.value)) {
-      // Move to the next input field if available
       if (index < 5 && event.target.value !== "") {
         inputRefs[index + 1].current.focus();
       }
     } else {
-      // Clear the input if it's not a number
       event.target.value = "";
     }
   };
 
   const handleBackspace = (event, index) => {
-    // Move to the previous input field if available
     if (index > 0 && event.key === "Backspace" && event.target.value === "") {
       inputRefs[index - 1].current.focus();
     }
@@ -61,20 +60,18 @@ const OtpVerify = () => {
     };
   }, [resendTimer, isTimerRunning]);
 
-  const handleResendOtp = () => {
-    // Add logic here to resend OTP
-    setResendTimer(30); // Reset the timer to 30 seconds
-    setIsTimerRunning(true);
+  const style = {
+    color: "white",
   };
 
   return (
-    <>
+    <Fragment>
       <section>
         <Modal show={show} animation={false} onHide={handleClose}>
           <div className="modal-header">
             <div className="chasisheader">
               <img src={chevron} alt="back-btn" className="back-btn" />
-              <h5 className="modal-title modalheader">OTP Verification</h5>
+              <h3 className="modal-title modalheader">OTP Verification</h3>
             </div>
 
             <span onClick={handleClose} className="closebtnchasis">
@@ -94,6 +91,11 @@ const OtpVerify = () => {
                       ref={ref}
                       onChange={(e) => handleInput(e, index)}
                       onKeyDown={(e) => handleBackspace(e, index)}
+                      inputMode="numeric"
+                      autoComplete="off"
+                      autoCorrect="off"
+                      autoCapitalize="none"
+                      style={style} // Correctly apply the style object
                     />
                   </div>
                 ))}
@@ -109,18 +111,26 @@ const OtpVerify = () => {
                 id="resendOtp"
                 type="button"
                 className="form-text text-muted resendOtp"
-                onClick={handleResendOtp}
+                onClick={() => {
+                  setResendTimer(30);
+                  setIsTimerRunning(true);
+                }}
               >
                 Resend OTP
               </div>
             )}
-            <button type="submit" className="verifybtns" onClick={otpVerified}>
+            <button
+              id="verifyOtp"
+              type="submit"
+              className="btn btn-block disableOtp"
+              onClick={otpVerified}
+            >
               Verify
             </button>
           </div>
         </Modal>
       </section>
-    </>
+    </Fragment>
   );
 };
 

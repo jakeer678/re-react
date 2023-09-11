@@ -13,6 +13,8 @@ import { contextStore } from "../context/Contextstore";
 import "../Styles/EnterOtp.css";
 
 const EnterOtp = () => {
+  const [resendTimer, setResendTimer] = useState(0);
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
   const { show, handleShow, handleClose } = useContext(contextStore);
 
   const redirect = useNavigate();
@@ -20,12 +22,8 @@ const EnterOtp = () => {
     redirect("/otpVerify");
   };
 
-  const [resendTimer, setResendTimer] = useState(0);
-  const [isTimerRunning, setIsTimerRunning] = useState(false);
 
-  const inputRefs = Array(6)
-    .fill()
-    .map((_, index) => useRef(null));
+  const inputRefs = Array(6).fill().map(() => useRef(null));
 
   const handleInput = (event, index) => {
     if (!isTimerRunning) {
@@ -60,6 +58,7 @@ const EnterOtp = () => {
       clearInterval(countdown);
     };
   }, [resendTimer, isTimerRunning]);
+
   const style = {
     color: "white",
   };
@@ -95,7 +94,7 @@ const EnterOtp = () => {
                       autoComplete="off"
                       autoCorrect="off"
                       autoCapitalize="none"
-                      style={{ style }}
+                      style={style} // Correctly apply the style object
                     />
                   </div>
                 ))}
