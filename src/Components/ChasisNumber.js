@@ -1,7 +1,7 @@
 import React, { Fragment, useContext } from "react";
 import chevron from "../assets/Images/chevron_left.svg";
 import chasis from "../assets/Images/view-chessis.svg";
-import chasisnum from "../assets/Images/chasisnum.png";
+import licence from "../assets/Images/licence.png";
 import close from "../assets/Images/close.svg";
 import Frame from "../assets/Images/Frame.svg";
 import "../Styles/ChasisNumber.css";
@@ -36,7 +36,7 @@ const ChasisNumber = () => {
             <p className="chesis-view-zoomed">MALPC8131LLM109314</p>
             <div className="veritcalarrow"></div>
             <img
-              src={chasisnum}
+              src={licence}
               alt="view-chessis-img"
               className="view-chessis-img"
             />

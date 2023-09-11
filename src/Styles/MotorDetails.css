@@ -86,11 +86,11 @@
 
 @media screen and (min-width: 769px) {
   .modal-body .vehicle-details-form label {
-    font-size: 13px;
+    font-size: 12.6px;
     margin-bottom: 6px;
   }
   .vehicle-details-form .redirect-links {
-    font-size: 13px;
+    font-size: 12.6px;
   }
   .modal-header h2 {
     font-size: 24px !important;

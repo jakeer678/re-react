@@ -40,10 +40,10 @@
   color: #ededed;
   font-family: Montserrat;
   color: var(--neutral-text, #ededed);
-  font-size: 14px;
+  font-size: 13.5px;
   font-style: normal;
   line-height: 140%;
-  opacity: 0.8;
+  opacity: 0.84;
 }
 
 .banner-main .banner-img {

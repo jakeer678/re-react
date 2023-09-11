@@ -32,8 +32,8 @@ const MotorDetails = () => {
                 <input
                   type="text"
                   className="form-control motorcycle-details motor-reg-no"
-                  aria-describedby="reg-no"
-                  placeholder="Enter Vehicle Registration Number"
+                  id="chassis-no"
+                  placeholder="Enter Vehicle Register Number"
                 />
                 <div className="break" style={{ margin: "4" }}>
                   <span>Or</span>
@@ -41,9 +41,8 @@ const MotorDetails = () => {
                 <label htmlFor="chassis-no">Enter your Chassis Number</label>
                 <input
                   type="text"
-                  className="form-control motorcycle-details"
+                  className="form-control motorcycle-details motor-reg-no"
                   id="chassis-no"
-                  aria-describedby="Chassis"
                   placeholder="Enter Chassis Number"
                 />
                 <span className="redirect-links">

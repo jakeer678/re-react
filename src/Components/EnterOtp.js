@@ -60,6 +60,9 @@ const EnterOtp = () => {
       clearInterval(countdown);
     };
   }, [resendTimer, isTimerRunning]);
+  const style = {
+    color: "white",
+  };
 
   return (
     <Fragment>
@@ -92,6 +95,7 @@ const EnterOtp = () => {
                       autoComplete="off"
                       autoCorrect="off"
                       autoCapitalize="none"
+                      style={{ style }}
                     />
                   </div>
                 ))}
