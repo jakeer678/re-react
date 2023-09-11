@@ -22,7 +22,7 @@ const EnterOtp = () => {
     redirect("/otpVerify");
   };
 
-
+  // Define the array of refs directly within the component
   const inputRefs = Array(6).fill().map(() => useRef(null));
 
   const handleInput = (event, index) => {
@@ -133,4 +133,4 @@ const EnterOtp = () => {
   );
 };
 
-export default EnterOtp;
+export default EnterOtp

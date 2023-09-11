@@ -1,4 +1,3 @@
-
 import React, {
   useContext,
   useState,
@@ -95,7 +94,7 @@ const OtpVerify = () => {
                       autoComplete="off"
                       autoCorrect="off"
                       autoCapitalize="none"
-                      style={style} // Correctly apply the style object
+                      style={style}
                     />
                   </div>
                 ))}
