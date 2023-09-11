@@ -7,7 +7,7 @@ import Modal from "react-bootstrap/Modal";
 import { contextStore } from "../context/Contextstore";
 
 const Auth = () => {
-  const [inputNumber, setInputValue] = useState("+91");
+  const [inputNumber, setInputValue] = useState("");
   const { show, handleShow, handleClose } = useContext(contextStore);
   const redirect = useNavigate();
   const sendOtpAuth = () => {
@@ -34,17 +34,19 @@ const Auth = () => {
               <form>
                 <label htmlFor="inputPhone">Please enter your phone no.</label>
                 <div className="input-group">
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="inputPhone"
-                    placeholder="Enter Phone"
-                    maxLength="14"
-                    value={inputNumber}
-                    onChange={handleInputChange}
-                    inputMode="tel"
-                    pattern="[0-9]*"
-                  />
+                <input
+                 
+                  className="form-control motorcycle-details motor-reg-no"
+                  id="chassis-no"
+                  type="tel"
+                  value={inputNumber}
+                  onChange={handleInputChange}
+                  inputMode="tel"
+                  pattern="[0-9]*"
+                  maxLength="14"
+                  placeholder="Enter Phone Number"
+                />
+                
                 </div>
                 <span className="phoneHelpauth">
                   6-digit OTP will be sent to this phone number

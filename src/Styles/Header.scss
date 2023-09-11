@@ -1,3 +1,16 @@
+
+
+
+.nav-header {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0%);
+}
+
+.menu-open {
+  transform: translateX(-100%);
+}
+
+
 .menu-logo {
   display: flex;
   justify-content: space-around;
@@ -125,3 +138,5 @@
     display: none;
   }
 }
+
+

@@ -189,28 +189,10 @@ input#inputPhone {
   left: 35%;
 }
 
-// RC Verification [START]
-.rc-verify-btns button {
-  padding: 8px 10px 8px 10px;
-  width: 355px;
-  height: 48px;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-}
-#rc-skip-verify {
-  background: #282828;
-  border: 1px solid #616161;
-  color: white;
-}
+
 #rc-verify-submit {
   background: linear-gradient(0deg, #474747, #474747),
     linear-gradient(0deg, #373737, #373737);
-}
-.rc-verify-btns {
-  justify-content: space-between;
-  margin-top: 25rem;
 }
 
 .closebtn {

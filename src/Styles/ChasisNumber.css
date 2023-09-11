@@ -137,7 +137,7 @@ input#inputPhone {
   margin-bottom: 1.5rem;
 }
 
-.regd-motorcycles input[type=radio] + label::before {
+.regd-motorcycles input[type="radio"] + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -148,7 +148,7 @@ input#inputPhone {
   border-radius: 50%;
 }
 
-.regd-motorcycles input[type=radio]:checked + label::after {
+.regd-motorcycles input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
   left: 4.5px;
@@ -160,7 +160,8 @@ input#inputPhone {
 }
 
 .regd-motorcycles.selected {
-  background: linear-gradient(0deg, #403b29, #403b29), linear-gradient(0deg, #847543, #847543);
+  background: linear-gradient(0deg, #403b29, #403b29),
+    linear-gradient(0deg, #847543, #847543);
 }
 
 .regd-motor-header .modalTitle {
@@ -206,31 +207,6 @@ input#inputPhone {
   position: absolute;
   top: 23%;
   left: 35%;
-}
-
-.rc-verify-btns button {
-  padding: 8px 10px 8px 10px;
-  width: 355px;
-  height: 48px;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-}
-
-#rc-skip-verify {
-  background: #282828;
-  border: 1px solid #616161;
-  color: white;
-}
-
-#rc-verify-submit {
-  background: linear-gradient(0deg, #474747, #474747), linear-gradient(0deg, #373737, #373737);
-}
-
-.rc-verify-btns {
-  justify-content: space-between;
-  margin-top: 25rem;
 }
 
 .closebtn {
@@ -348,4 +324,4 @@ input#inputPhone {
     color: #a7a7a7;
     letter-spacing: 0.5px;
   }
-}/*# sourceMappingURL=ChasisNumber.css.map */
+} /*# sourceMappingURL=ChasisNumber.css.map */

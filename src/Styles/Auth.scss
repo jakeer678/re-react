@@ -42,13 +42,7 @@
 button.close {
   color: #ffffff;
 }
-.break {
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid rgba(55, 55, 55, 1);
-  line-height: 0.1em;
-  margin: 20px 0 30px;
-}
+
 
 input#inputPhone {
   background: linear-gradient(0deg, #373737, #373737);
@@ -57,9 +51,7 @@ input#inputPhone {
   height: 48px;
   border-radius: 0;
 }
-#inputPhone::placeholder {
-  color: #fff;
-}
+
 
 .close {
   font-size: 2rem !important;
@@ -130,6 +122,8 @@ input#inputPhone {
   color: var(--text-neutral-strong, #ededed);
   font-family: Montserrat !important;
 }
+
+
 @media screen and (min-width: 769px) {
   .modal-content {
     background: #282828;

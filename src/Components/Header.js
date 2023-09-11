@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/Images/logo.svg";
 import menu from "../assets/Images/menu.svg";
-import vector from "../assets/Images/Vector.svg";
+import mylocation from "../assets/Images/my_location.svg";
 import social from "../assets/Images/search-icon.svg";
 import arrowback from "../assets/Images/arrow_back.svg";
 import Navbar from "react-bootstrap/Navbar";
@@ -124,7 +124,7 @@ const Header = () => {
 
           <div className="nav-icons">
             <div className="icons">
-              <img src={vector} alt="vector" />
+              <img src={mylocation} alt="vector" />
             </div>
             <div className="icons">
               <img src={arrowback} alt="arrowback" />

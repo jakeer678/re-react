@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { contextStore } from "../context/Contextstore";
 import Modal from "react-bootstrap/Modal";
 const VerifyNumber = () => {
-  const [inputNumber, setInputValue] = useState("+91");
+  const [inputNumber, setInputValue] = useState("");
   const redirect = useNavigate();
   const { show, handleShow, handleClose } = useContext(contextStore);
 
@@ -34,13 +34,15 @@ const VerifyNumber = () => {
               <form>
                 <label htmlFor="inputPhone">Please enter your phone no.</label>
                 <input
+                  className="form-control motorcycle-details motor-reg-no"
+                  id="chassis-no"
                   type="tel"
-                  className="form-control"
-                  id="inputPhone"
-                  placeholder="Enter Phone"
-                  maxLength="14"
                   value={inputNumber}
                   onChange={handleInputChange}
+                  inputMode="tel"
+                  pattern="[0-9]*"
+                  maxLength="14"
+                  placeholder="Enter Phone Number"
                 />
                 <span className="phoneHelpauth">
                   6-digit OTP will be sent to this phone number
