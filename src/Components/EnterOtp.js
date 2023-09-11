@@ -1,10 +1,4 @@
-import React, {
-  useContext,
-  useState,
-  useRef,
-  useEffect,
-  Fragment,
-} from "react";
+import React, { useContext, useState, useEffect, Fragment } from "react";
 import chevron from "../assets/Images/chevron_left.svg";
 import chasis from "../assets/Images/view-chessis.svg";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +9,7 @@ import "../Styles/EnterOtp.css";
 const EnterOtp = () => {
   const [resendTimer, setResendTimer] = useState(0);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const [otpInputs, setOtpInputs] = useState(["", "", "", "", "", ""]);
   const { show, handleShow, handleClose } = useContext(contextStore);
 
   const redirect = useNavigate();
@@ -22,8 +17,7 @@ const EnterOtp = () => {
     redirect("/otpVerify");
   };
 
-  // Define the array of refs directly within the component
-  const inputRefs = Array(6).fill().map(() => useRef(null));
+ 
 
   const handleInput = (event, index) => {
     if (!isTimerRunning) {
@@ -31,9 +25,14 @@ const EnterOtp = () => {
       setIsTimerRunning(true);
     }
 
-    if (/^[0-9]$/.test(event.target.value)) {
-      if (index < 5 && event.target.value !== "") {
-        inputRefs[index + 1].current.focus();
+    const newValue = event.target.value;
+    if (/^[0-9]$/.test(newValue)) {
+      const newOtpInputs = [...otpInputs];
+      newOtpInputs[index] = newValue;
+      setOtpInputs(newOtpInputs);
+
+      if (index < 5 && newValue !== "") {
+        document.getElementById(`otp-input-${index + 1}`).focus();
       }
     } else {
       event.target.value = "";
@@ -42,7 +41,7 @@ const EnterOtp = () => {
 
   const handleBackspace = (event, index) => {
     if (index > 0 && event.key === "Backspace" && event.target.value === "") {
-      inputRefs[index - 1].current.focus();
+      document.getElementById(`otp-input-${index - 1}`).focus();
     }
   };
 
@@ -81,20 +80,21 @@ const EnterOtp = () => {
             <label htmlFor="">Enter OTP</label>
             <form id="myForm" method="get" className="digit-group">
               <div className="row justify-content-center">
-                {inputRefs.map((ref, index) => (
+                {otpInputs.map((value, index) => (
                   <div className="col-2" key={index}>
                     <input
                       type="text"
                       className="form-control otp-input"
                       maxLength="1"
-                      ref={ref}
+                      id={`otp-input-${index}`}
+                      value={value}
                       onChange={(e) => handleInput(e, index)}
                       onKeyDown={(e) => handleBackspace(e, index)}
                       inputMode="numeric"
                       autoComplete="off"
                       autoCorrect="off"
                       autoCapitalize="none"
-                      style={style} // Correctly apply the style object
+                      style={style}
                     />
                   </div>
                 ))}
